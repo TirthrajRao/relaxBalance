@@ -11,6 +11,14 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'list-view',
+    loadChildren: () => import('./list-view/list-view.module').then( m => m.ListViewPageModule)
+  },
+  {
+    path: 'inner-page',
+    loadChildren: () => import('./inner-page/inner-page.module').then( m => m.InnerPagePageModule)
+  },
 ];
 
 @NgModule({

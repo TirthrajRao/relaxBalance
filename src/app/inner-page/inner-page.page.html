@@ -1,0 +1,40 @@
+<ion-header>
+    <ion-toolbar class="headerTool">
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="list-view"></ion-back-button>
+        </ion-buttons>
+        <ion-title class="ion-text-center">
+            Balance
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content class="backgroundImage">
+    <ion-row *ngIf="activeTrack" class="musicControls">
+        <ion-col size="12" class="ion-text-center">
+            <input type="range" class="range" min="0" max="100" [(ngModel)]="progress" (change)="seek(progress)" />
+        </ion-col>
+        <ion-col size="12">
+            <p style="float: left;margin-left: 6%;color: #fff;font-weight: bolder;margin-top: -3px;">{{totalTimePlayed}}</p>
+            <p style="float: right;margin-right: 6%;color: #fff;font-weight: bolder;margin-top: -3px;">{{ duration }}
+            </p>
+        </ion-col>
+        <ion-col size="12" class="ion-text-center">
+            <ion-button fill="clear" (click)="move('backward',progress)">
+                <ion-icon name="play-back-outline" style="font-size: 30px;color: #fff;"></ion-icon>
+            </ion-button>
+
+            <ion-button fill="clear" (click)="togglePlayer(false)" *ngIf="!isPlaying">
+                <ion-icon slot="icon-only" style="font-size: 42px;color: #fff;" name="play"></ion-icon>
+            </ion-button>
+
+            <ion-button fill="clear" (click)="togglePlayer(true)" *ngIf="isPlaying">
+                <ion-icon slot="icon-only" style="font-size: 42px;color: #fff;" name="pause"></ion-icon>
+            </ion-button>
+
+            <ion-button fill="clear" (click)="move('forward',progress)">
+                <ion-icon name="play-forward-outline" style="font-size: 30px;color: #fff;"></ion-icon>
+            </ion-button>
+
+        </ion-col>
+    </ion-row>
+</ion-content>

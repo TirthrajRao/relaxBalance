@@ -21,7 +21,19 @@ export class AppComponent {
   initializeApp() {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
+      this.setTrialStartDate();
       this.splashScreen.hide();
     });
+  }
+
+  setTrialStartDate() {
+    if (!localStorage.getItem('trialStart')) {
+      let todaysDate = new Date();
+      console.log("ff")
+      localStorage.setItem('trialStart',todaysDate.toString());
+      // const timeDiff =  +(new Date()) - +(new Date(localStorage.getItem('trialStart')));
+      // const days = timeDiff / (1000 * 60 * 60 * 24)
+      // console.log(days.toFixed(0))
+    }
   }
 }

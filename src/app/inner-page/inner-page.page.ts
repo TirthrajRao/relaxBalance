@@ -19,7 +19,7 @@ export class InnerPagePage implements OnInit {
   isPlaying = false;
   totalTimePlayed: any
   @ViewChild('range', { static: false }) range: IonRange;
-  progress: any;
+  progress = 0;
   duration: any;
   constructor(
     public loadingController: LoadingController,
@@ -30,22 +30,26 @@ export class InnerPagePage implements OnInit {
   }
 
   ionViewWillLeave() {
-    this.player.stop();
+    if(this.type == 'music'){
+      this.player.stop();
+    }
   }
 
   ngOnInit() {
   }
 
+  //check for type if music/text
   checkForType() {
     this.type = this.route.snapshot.params.type;
 
     if (this.type == 'music') {
       this.musicPath = this.route.snapshot.params.name
-      this.musicPath = '../../assets/music/' + this.musicPath;
+      this.musicPath = './assets/music/' + this.musicPath;
       this.start();
     }
   }
 
+  //creating audio object and playing audio file 
   async start() {
     const loading = await this.loadingController.create({
       cssClass: 'my-custom-class',
@@ -60,15 +64,12 @@ export class InnerPagePage implements OnInit {
       src: [this.musicPath],
       onplay: async () => {
         await loading.dismiss();
-        console.log('ON PLAY')
         this.isPlaying = true;
         this.duration = await this.display(this.player.duration());
-        console.log("DURATION",this.duration)
         this.activeTrack = this.musicPath;
         this.updateProgress();
       },
       onend: () => {
-        console.log('ON END');
         this.player.stop();
         this.isPlaying = false;
       }
@@ -77,6 +78,7 @@ export class InnerPagePage implements OnInit {
     this.player.play();
   }
 
+  //function for play & pause 
   togglePlayer(pause) {
     this.isPlaying = !pause;
     if (pause) {
@@ -86,40 +88,37 @@ export class InnerPagePage implements OnInit {
     }
   }
 
+  //for adding some seconds to current value
   seek(value) {
-    console.log('sdsd',value)
     let newValue = +value;
     let duration = this.player.duration();
     this.player.seek(duration * (newValue / 100));
   }
 
+  //updating progress bar for audio file
   async updateProgress() {
     let seek = this.player.seek();
     this.totalTimePlayed = await this.display(Math.floor(seek));
-    // console.log("TIME PLAYED",totalTimePassed)
     this.progress = (seek / this.player.duration()) * 100 || 0;
     setTimeout(() => {
       this.updateProgress();
     }, 1000);
   }
 
+  //moving backward or forward
   move(type,progress) {
-    console.log(type)
     let newValue = +progress;
     let duration = this.player.duration();
     if (type == 'forward') {
       let currentTime = duration * (newValue / 100);
-      this.player.seek(currentTime + 15);
-      console.log("CURRENT TIME", currentTime);
-      console.log("FORWARDED TIME", currentTime + 15);
+      this.player.seek(currentTime + 10);
     } else if (type == 'backward') {
       let currentTime = duration * (newValue / 100);
-      this.player.seek(currentTime - 15);
-      console.log("CURRENT TIME", currentTime);
-      console.log("BACKWARDED TIME", currentTime - 15);
+      this.player.seek(currentTime - 10);
     }
   }
 
+  //making displayable format for audio timer
   display (seconds) {
     const format = val => `0${Math.floor(val)}`.slice(-2)
     // const hours = seconds / 3600

@@ -1,15 +1,17 @@
 <ion-header>
-    <ion-toolbar class="headerTool">
-        <ion-buttons slot="start">
-            <ion-back-button defaultHref="list-view"></ion-back-button>
-        </ion-buttons>
-        <ion-title class="ion-text-center">
+    <ion-toolbar mode="ios" class="headerTool">
+        <ion-title>
             Balance
         </ion-title>
+        <ion-buttons slot="start">
+            <ion-buttons slot="start">
+                <ion-back-button defaultHref="list-view" mode="md"></ion-back-button>
+            </ion-buttons>
+        </ion-buttons>
     </ion-toolbar>
 </ion-header>
-<ion-content class="backgroundImage">
-    <ion-row *ngIf="activeTrack" class="musicControls">
+<ion-content class="backgroundImage" *ngIf="type == 'music'">
+    <ion-row class="musicControls">
         <ion-col size="12" class="ion-text-center">
             <input type="range" class="range" min="0" max="100" [(ngModel)]="progress" (change)="seek(progress)" />
         </ion-col>
@@ -20,7 +22,7 @@
         </ion-col>
         <ion-col size="12" class="ion-text-center">
             <ion-button fill="clear" (click)="move('backward',progress)">
-                <ion-icon name="play-back-outline" style="font-size: 30px;color: #fff;"></ion-icon>
+                <img src="../../assets/images/icons8-replay-10-50.png" height="29px">
             </ion-button>
 
             <ion-button fill="clear" (click)="togglePlayer(false)" *ngIf="!isPlaying">
@@ -32,9 +34,46 @@
             </ion-button>
 
             <ion-button fill="clear" (click)="move('forward',progress)">
-                <ion-icon name="play-forward-outline" style="font-size: 30px;color: #fff;"></ion-icon>
+                <img src="../../assets/images/icons8-forward-10-30.png">
             </ion-button>
 
+        </ion-col>
+    </ion-row>
+</ion-content>
+<ion-content *ngIf="type == 'text'">
+    <ion-row>
+        <ion-col size="12">
+            <p>Vážená uživatelko, vážený uživateli Psychowalkmana,</p>
+
+            <p>vítejte v aplikaci věnované cílené práci s vlnovými délkami a jejich vlivu na organismus. Jistě už chcete tuto funkci vyzkoušet a tak hned pojďme na nutné minimum teorie:</p>
+
+            <p>Náš mozek pracuje ve frekvencích, které do určité míry lze upravovat vnější stimulací. Zvukem nebo světlem. Cílem našeho programu je na vědecké bázi postupně jemně upravovat tuto frekvenci do oblasti, která podporuje aktivaci myšlení, ale
+                také odpočinek, relaxaci a kvalitní spánek.</p>
+
+            <p>V tuto chvíli nabízíme tři základní nastavení, “Zlepšení učení”, “Zlepšení spánku” a “Hluboká meditace”. Všechny jsou k dispozici bez ohledu na datové připojení vašeho telefonu nebo tabletu. Lze používat i v letovém režimu. Relaxujte kdykoliv
+                a kdekoliv. V další verzi aplikace přibydou další nastavení.</p>
+
+            <p>Narozdíl od tradičních psychowalkmanů, Balance pracuje pouze se zvukem, nikoliv se světlem. Je to dáno instalací ve Vašem mobilním telefonu. Podle vědeckých výzkumů, zvuk ovlivňuje fungování našeho mozku velmi silně a tudíž efekt vlivu na
+                obě hemisféry Vašeho mozku bude znatelný i bez vizuálních stimulů. Jen bude jemnější než u audio-vizuálních zařízení. Vyzkoušejte náš audio psychowalkman a když Vám bude pomáhat a budete se zároveň cítit na silnější efekt, zkuste AVS zařízení
+                (audio a video).</p>
+
+            <p>Doporučujeme začít naším nejméně náročným programem, “Zlepšení učení”, které také působí jako stimulační soubor frekvencí a můžete ho bez obav používat kdekoliv. Délka tohoto programu je 15 minut, je nejkratší ze všech a odehrává se na pomezí
+                hladin Théta a Alfa, tedy cílovou frekvencí 9-10 Hz. Zaposlouchejte se do tzv. isochronních tónů. Po chvíli byste měli zvuk přestat vnímat a Váš mozek se začne postupně “přeprogramovávat”.</p>
+
+            <p>jste si již tento program vyzkoušeli a byl-li vám příjemný, můžete přejít k dalším dvěma, zaměřenými na intenzivní zklidnění. Jak “Zlepšení spánku”, tak “Hluboká meditace” jsou 25 minutové terapie s cílovou frekvencí v hladinách Delta a Theta,
+                3-7 Hz, respektive Schumannově rezonanci, 7-8 Hz. </p>
+
+            <p>Pro jejich použití doporučujeme být v prostředí, kde hlubší meditace Vašeho mozku nemůže nikoho ohrozit a kde není třeba Vaše maximální pozornost. Nedoporučujeme tedy při řízení, v práci a tam, kde je třeba rychle reagovat na okolní dění.
+                Naopak, pro usínání a hlubokou meditaci jsou velmi vhodné.</p>
+
+            <p>Doporučujeme tuto terapii pravidelně opakovat.</p>
+
+            <p>Pro využití funkce Psychowalkmenu je třeba mít na uších vždy sluchátka. Princip generování frekvencí pod slyšitelným pásmem funguje na rozdílných frekvencích pro každé ucho, jejichž rozdíl tvoří cílovou frekvenci pro Váš mozek. Z tohoto důvodu
+                Psychowalkman bez sluchátek bohužel nemůže fungovat. Děkujeme za pochopení.</p>
+
+            <p>Váš,</p>
+
+            <p>Psychowalkman</p>
         </ion-col>
     </ion-row>
 </ion-content>

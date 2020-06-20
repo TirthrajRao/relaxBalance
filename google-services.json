@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "455014031330",
+    "firebase_url": "https://balanceapp-czech.firebaseio.com",
+    "project_id": "balanceapp-czech",
+    "storage_bucket": "balanceapp-czech.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:455014031330:android:40888b88dd6f8779cc23bb",
+        "android_client_info": {
+          "package_name": "io.ionic.balanceapp.czech"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "455014031330-hcifr0bshldkhhhcepcqtar73ovbsphq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAa7BrddRHpeA-FB5UamxLEAkqwPh1Xnrk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "455014031330-hcifr0bshldkhhhcepcqtar73ovbsphq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

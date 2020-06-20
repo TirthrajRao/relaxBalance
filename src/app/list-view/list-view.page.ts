@@ -47,6 +47,7 @@ export class ListViewPage implements OnInit {
         cssClass: 'my-custom-class',
         header: 'Alert',
         message: 'Your trial period is over!',
+        backdropDismiss: false
       });
   
       await alert.present();

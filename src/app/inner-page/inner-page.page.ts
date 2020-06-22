@@ -35,6 +35,9 @@ export class InnerPagePage implements OnInit {
     }
   }
 
+  ionViewWillEnter(){
+    
+  }
   ngOnInit() {
   }
 
@@ -62,6 +65,7 @@ export class InnerPagePage implements OnInit {
     }
     this.player = new Howl({
       src: [this.musicPath],
+      html5: true,
       onplay: async () => {
         await loading.dismiss();
         this.isPlaying = true;
@@ -111,10 +115,10 @@ export class InnerPagePage implements OnInit {
     let duration = this.player.duration();
     if (type == 'forward') {
       let currentTime = duration * (newValue / 100);
-      this.player.seek(currentTime + 10);
+      this.player.seek(currentTime + 15);
     } else if (type == 'backward') {
       let currentTime = duration * (newValue / 100);
-      this.player.seek(currentTime - 10);
+      this.player.seek(currentTime - 15);
     }
   }
 

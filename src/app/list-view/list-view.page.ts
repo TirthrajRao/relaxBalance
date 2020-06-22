@@ -2,7 +2,9 @@ import { Platform } from '@ionic/angular';
 import { Component, OnInit } from '@angular/core';
 import { FCM } from '@ionic-native/fcm/ngx';
 import * as moment from 'moment-timezone';
-import { AlertController } from '@ionic/angular';
+import { PopoverController } from '@ionic/angular';
+import { AlertPopoverComponent } from '../alert-popover/alert-popover.component';
+import { InAppPurchase } from '@ionic-native/in-app-purchase/ngx';
 
 @Component({
   selector: 'app-list-view',
@@ -11,19 +13,36 @@ import { AlertController } from '@ionic/angular';
 })
 export class ListViewPage implements OnInit {
   momentjs: any = moment;
-  constructor(public alertController: AlertController,private fcm: FCM, private platform: Platform) { }
+  productIds = ['prod1', 'prod2']; // <- Add your product Ids here
+  products: any;
+
+  constructor(private iap: InAppPurchase, public popoverController: PopoverController, private fcm: FCM, private platform: Platform) { }
 
   ngOnInit() {
     this.setTrialStartDate();
     this.getFcmToken();
     this.checkForEndPeriodTrial();
+    this.checkProducts();
+  }
+
+  checkProducts() {
+    this.iap
+      .getProducts(this.productIds)
+      .then((products) => {
+        console.log(products);
+        this.products = products
+        console.log("PRODUCTS", this.products)
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }
 
   setTrialStartDate() {
     if (!localStorage.getItem('trialStart')) {
       let todaysDate = moment().format();
       console.log("ff")
-      localStorage.setItem('trialStart',todaysDate.toString());
+      localStorage.setItem('trialStart', todaysDate.toString());
     }
   }
 
@@ -42,15 +61,14 @@ export class ListViewPage implements OnInit {
     let end = moment();
     let noOfDaysTrial = end.diff(start, 'days');
     console.log(noOfDaysTrial)
-    if(noOfDaysTrial > 14){
-      const alert = await this.alertController.create({
+    if (noOfDaysTrial > 14) {
+      const popover = await this.popoverController.create({
+        component: AlertPopoverComponent,
         cssClass: 'my-custom-class',
-        header: 'Alert',
-        message: 'Your trial period is over!',
+        translucent: true,
         backdropDismiss: false
       });
-  
-      await alert.present();
+      await popover.present();
     }
   }
 }

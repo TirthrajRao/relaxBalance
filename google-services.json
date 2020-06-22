@@ -34,6 +34,35 @@
           ]
         }
       }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:455014031330:android:ec977b15a8cd0561cc23bb",
+        "android_client_info": {
+          "package_name": "io.ionic.psychowalkman"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "455014031330-hcifr0bshldkhhhcepcqtar73ovbsphq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAa7BrddRHpeA-FB5UamxLEAkqwPh1Xnrk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "455014031330-hcifr0bshldkhhhcepcqtar73ovbsphq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
     }
   ],
   "configuration_version": "1"

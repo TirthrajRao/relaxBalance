@@ -9,6 +9,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FCM } from '@ionic-native/fcm/ngx';
+import { InAppPurchase } from '@ionic-native/in-app-purchase/ngx';
 
 @NgModule({
   declarations: [AppComponent],
@@ -17,6 +18,7 @@ import { FCM } from '@ionic-native/fcm/ngx';
   providers: [
     StatusBar,
     SplashScreen,
+    InAppPurchase,
     FCM,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],

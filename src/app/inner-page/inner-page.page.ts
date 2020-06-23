@@ -17,10 +17,10 @@ export class InnerPagePage implements OnInit {
   activeTrack = null;
   player: any;
   isPlaying = false;
-  totalTimePlayed: any
+  totalTimePlayed: any = "00:00"
   @ViewChild('range', { static: false }) range: IonRange;
   progress = 0;
-  duration: any;
+  duration: any = "00:00";
   constructor(
     public loadingController: LoadingController,
     private route: ActivatedRoute,
@@ -30,13 +30,13 @@ export class InnerPagePage implements OnInit {
   }
 
   ionViewWillLeave() {
-    if(this.type == 'music'){
+    if (this.type == 'music') {
       this.player.stop();
     }
   }
 
-  ionViewWillEnter(){
-    
+  ionViewWillEnter() {
+
   }
   ngOnInit() {
   }
@@ -110,7 +110,7 @@ export class InnerPagePage implements OnInit {
   }
 
   //moving backward or forward
-  move(type,progress) {
+  move(type, progress) {
     let newValue = +progress;
     let duration = this.player.duration();
     if (type == 'forward') {
@@ -123,11 +123,11 @@ export class InnerPagePage implements OnInit {
   }
 
   //making displayable format for audio timer
-  display (seconds) {
+  display(seconds) {
     const format = val => `0${Math.floor(val)}`.slice(-2)
     // const hours = seconds / 3600
     const minutes = (seconds % 3600) / 60
-  
+
     return [minutes, seconds % 60].map(format).join(':')
   }
 }

@@ -12,8 +12,8 @@
             <input type="range" class="range" min="0" max="100" [(ngModel)]="progress" (change)="seek(progress)" />
         </ion-col>
         <ion-col size="12">
-            <p style="float: left;margin-left: 6%;color: #fff;font-weight: bolder;margin-top: -3px;">{{totalTimePlayed}}</p>
-            <p style="float: right;margin-right: 6%;color: #fff;font-weight: bolder;margin-top: -3px;">{{ duration }}
+            <p class="timePlayed">{{totalTimePlayed}}</p>
+            <p class="totalDuration">{{ duration }}
             </p>
         </ion-col>
         <ion-col size="12" class="ion-text-center">

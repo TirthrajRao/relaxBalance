@@ -48,3 +48,19 @@
     p {
         color: #0aa90a;
     }
+    
+    .timePlayed {
+        float: left;
+        margin-left: 6%;
+        color: #fff;
+        font-weight: bolder;
+        margin-top: -3px;
+    }
+    
+    .totalDuration {
+        float: right;
+        margin-right: 6%;
+        color: #fff;
+        font-weight: bolder;
+        margin-top: -3px;
+    }

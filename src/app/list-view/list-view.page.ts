@@ -49,9 +49,21 @@ export class ListViewPage implements OnInit {
   getFcmToken() {
     if (!localStorage.getItem('token')) {
       this.platform.ready().then(() => {
-        this.fcm.getToken().then(token => {
-          localStorage.setItem('token', token)
-        });
+        if (this.platform.is('ios')) {
+          const w: any = window;
+          w.FCMPlugin.requestPushPermissionIOS(() => {
+            console.log('push permissions success');
+            this.fcm.getToken().then(token => {
+              localStorage.setItem('token', token)
+            });
+          }, (e) => {
+            console.log('push permissions fail', e);
+          });
+        } else {
+          this.fcm.getToken().then(token => {
+            localStorage.setItem('token', token)
+          });
+        }
       })
     }
   }

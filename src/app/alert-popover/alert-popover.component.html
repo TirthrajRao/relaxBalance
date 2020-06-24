@@ -1,23 +1,18 @@
 <ion-list>
     <ion-item>
-        <h6>Děkujeme Vám za důvěru. Pro přístup k plné verzi a novinkámVám nabízíme tyto formy předplatného: </h6>
+        <h6>Děkujeme vám za zájem o naší aplikaci Psychowalkman. Pokud jí chcete využívat i nadále, vyberte si prosím předplatné:
+        </h6>
     </ion-item>
-    <ion-item>
-        <p>99,- Kč měsíčně </p>
+    <ion-item (click)="checkout('kcmesicne')">
+        <p>49,- Kč měsíčně </p>
     </ion-item>
-    <ion-item>
-        <p>999,- Kč ročně </p>
+    <ion-item (click)="checkout('kcrocne')">
+        <p>499,- Kč ročně</p>
     </ion-item>
-    <ion-item>
-        <span>69,- Kč měsíčně předplatitel Meduňky</span>
+    <ion-item (click)="checkout('kcpropredplatitelebalance')">
+        <span>29,- Kč pro předplatitele Balance</span>
     </ion-item>
-    <ion-item>
-        <p> Obnovit</p>
-    </ion-item>
-    <ion-item>
-        <p> Obnovit</p>
-    </ion-item>
-    <ion-item>
-        <p>Snad někdy příště </p>
+    <ion-item (click)="cancel()">
+        <p style="color: red;"> Možná později</p>
     </ion-item>
 </ion-list>

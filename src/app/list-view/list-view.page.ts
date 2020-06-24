@@ -39,13 +39,12 @@ export class ListViewPage implements OnInit {
     this.iap2.verbosity = this.iap2.DEBUG;
     this.iap2.register({
       id: 'kcmesicne',
-      type: this.iap2.CONSUMABLE
+      type: this.iap2.PAID_SUBSCRIPTION
     });
     this.product = this.iap2.get('kcmesicne');
     this.registerHandlersForPurchase('kcmesicne');
     // restore purchase
     this.iap2.refresh();
-   
   }
 
 
@@ -53,7 +52,7 @@ export class ListViewPage implements OnInit {
     this.registerHandlersForPurchase('kcmesicne');
     try {
       let product = this.iap2.get('kcmesicne');
-      console.log('Product Info: ' + JSON.stringify(product));
+      console.log('Product Info: ',  product);
       this.iap2.order('kcmesicne').then((p) => {
         console.log('Purchase Succesful' + JSON.stringify(p));
       }).catch((e) => {

@@ -64,7 +64,7 @@ export class ListViewPage implements OnInit {
     let end = moment();
     let noOfDaysTrial = end.diff(start, 'days');
     console.log(noOfDaysTrial)
-    // if (noOfDaysTrial > 14) {
+    if (noOfDaysTrial > 14) {
       const popover = await this.popoverController.create({
         component: AlertPopoverComponent,
         cssClass: 'my-custom-class',
@@ -72,6 +72,6 @@ export class ListViewPage implements OnInit {
         backdropDismiss: false
       });
       await popover.present();
-    // }
+    }
   }
 }

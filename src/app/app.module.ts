@@ -10,10 +10,12 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FCM } from '@ionic-native/fcm/ngx';
 import { InAppPurchase2 } from '@ionic-native/in-app-purchase-2/ngx';
+import { CommonModule } from '@angular/common';
+import {AlertPopoverComponent} from './alert-popover/alert-popover.component'
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent,AlertPopoverComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,CommonModule],
   providers: [
     StatusBar,
     SplashScreen,

@@ -1,6 +1,6 @@
 import { async } from '@angular/core/testing';
 import { Platform } from '@ionic/angular';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
 import { FCM } from '@ionic-native/fcm/ngx';
 import * as moment from 'moment-timezone';
 import { PopoverController } from '@ionic/angular';
@@ -13,6 +13,7 @@ import { AlertPopoverComponent } from '../alert-popover/alert-popover.component'
 })
 export class ListViewPage implements OnInit {
   momentjs: any = moment;
+  backButtonSubscription: any;
 
   constructor(
     public popoverController: PopoverController,
@@ -28,7 +29,7 @@ export class ListViewPage implements OnInit {
     this.getFcmToken();
     this.checkForEndPeriodTrial();
   }
-
+  
   setTrialStartDate() {
     if (!localStorage.getItem('trialStart')) {
       let todaysDate = moment().format();

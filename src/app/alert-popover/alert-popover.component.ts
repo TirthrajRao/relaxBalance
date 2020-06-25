@@ -49,21 +49,21 @@ export class AlertPopoverComponent implements OnInit {
       }
     });
     this.iap2.when(productId).registered((product: IAPProduct) => {
-      // alert(` owned ${product.owned}`);
+      alert(` owned ${product.owned}`);
     });
     this.iap2.when(productId).owned((product: IAPProduct) => {
-      // alert(` owned ${product.owned}`);
+      alert(` owned ${product.owned}`);
       product.finish();
     });
     this.iap2.when(productId).approved((product: IAPProduct) => {
-      // alert('approved');
+      alert('approved');
       product.finish();
     });
     this.iap2.when(productId).refunded((product: IAPProduct) => {
-      // alert('refunded');
+      alert('refunded');
     });
     this.iap2.when(productId).expired((product: IAPProduct) => {
-      // alert('expired');
+      alert('expired');
     });
   }
 

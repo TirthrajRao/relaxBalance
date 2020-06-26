@@ -1,4 +1,4 @@
-<ion-content>
+<ion-content *ngIf="type == 'subscriptionType'">
     <ion-list>
         <ion-item>
             <h6>Děkujeme vám za zájem o naší aplikaci Psychowalkman. Pokud jí chcete využívat i nadále, vyberte si prosím předplatné:
@@ -10,11 +10,47 @@
         <ion-item (click)="checkout('kcrocne')">
             <p>499,- Kč ročně</p>
         </ion-item>
-        <ion-item (click)="checkout('kcpropredplatitelebalance')">
+        <ion-item (click)="discountedCheckout('kcpropredplatitelebalance')">
             <span>29,- Kč pro předplatitele Balance</span>
         </ion-item>
         <ion-item (click)="cancel()">
             <p style="color: red;"> Možná později</p>
         </ion-item>
     </ion-list>
+</ion-content>
+
+<ion-content *ngIf="type == 'trialInfo'" class="ion-padding trialInfo">
+    <h6>
+        Děkujeme Vám. Vítejte v aplikaci Psychowalkman.
+    </h6>
+    <h6>
+        Vzhledem k tomu, že využívá výsledky mnohaletého vědeckého výzkumu o blahodárném vlivu zvukových frekvencí na lidský mozek věříme, že Vám efektivně pomůže ve chvílích, kdy potřebujete zklidnit mysl.
+    </h6>
+    <h6>
+        Nyní máte 14 dní na její užívání zdarma a bez omezení. Kdykoliv a kdekoliv bez nutnosti datového připojení.
+    </h6>
+    <h6>
+        Pak Vám nabídneme možnost předplatného pro zachování plného obsahu a přístup k novinkám.
+    </h6>
+    <div class="agree" (click)="dismiss('trialInfo')">
+        <ion-button>Souhlasím</ion-button>
+    </div>
+</ion-content>
+
+<ion-content *ngIf="type == 'rating'" class="ion-padding trialInfo">
+    <h6>
+        Ohodnoťte prosím tuto aplikaci, děkujeme…
+    </h6>
+    <div class="agree">
+        <ion-button (click)="dismiss('false')">Později</ion-button>
+        <ion-button (click)="dismiss('true')">Děkujeme</ion-button>
+    </div>
+</ion-content>
+
+<ion-content *ngIf="type == 'subscribeConfirm'" class="ion-padding trialInfo">
+    <h6>{{text}} </h6>
+    <div class="agree">
+        <ion-button (click)="dismiss('true')">Chci vědět víc</ion-button>
+        <ion-button (click)="dismiss('false')">Ještě si to rozmyslím</ion-button>
+    </div>
 </ion-content>

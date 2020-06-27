@@ -19,7 +19,7 @@ export class ListViewPage implements OnInit {
   backButtonSubscription: any;
 
   constructor(
-    private router:Router,
+    private router: Router,
     private market: Market,
     public popoverController: PopoverController,
     private fcm: FCM,
@@ -67,13 +67,13 @@ export class ListViewPage implements OnInit {
     }
   }
 
-  singleItem(type,item){
+  singleItem(type, item) {
     let start = moment(localStorage.getItem('trialStart'));
     let end = moment();
     let noOfDaysTrial = end.diff(start, 'days');
-    if(noOfDaysTrial > 14){
+    if (noOfDaysTrial > 14) {
       this.checkForEndPeriodTrial();
-    }else{
+    } else {
       this.router.navigateByUrl('/inner-page/' + type + '/' + item);
     }
   }
@@ -168,9 +168,10 @@ export class ListViewPage implements OnInit {
         popoverRating.onDidDismiss().then((res: any) => {
           if (res.data == 'true') {
             console.log("rating", res);
-            this.market.open('io.ionic.psychowalkman')
+            this.market.open('io.ionic.psychowalkman');
+            localStorage.setItem('ratingCounter', '4')
           }
-          localStorage.setItem('ratingCounter', '4')
+          localStorage.setItem('ratingCounter', '1')
         })
       }
     } else {

@@ -14,7 +14,7 @@ export class AlertPopoverComponent implements OnInit {
     id: 'kcmesicne',
     type: this.iap2.PAID_SUBSCRIPTION
   }, {
-    id: 'kcrocne',
+    id: 'kcrocne1',
     type: this.iap2.PAID_SUBSCRIPTION
   }, {
     id: 'kcpropredplatitelebalance',
@@ -101,6 +101,10 @@ export class AlertPopoverComponent implements OnInit {
 
   dismiss(trialInfo) {
     this.popover.dismiss(trialInfo);
+  }
+
+  restoreExistingSubsription(){
+    
   }
 
   async discountedCheckout(productId) {

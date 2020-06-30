@@ -43,9 +43,7 @@ export class AlertPopoverComponent implements OnInit {
   }
 
   setup() {
-    this.iap2.verbosity = this.iap2.DEBUG;
     this.iap2.register(this.productId);
-    // restore purchase
     this.iap2.refresh();
   }
 
@@ -76,14 +74,19 @@ export class AlertPopoverComponent implements OnInit {
   }
 
   checkout(productId) {
-    this.registerHandlersForPurchase(productId);
+    // this.registerHandlersForPurchase(productId);
     try {
       let product = this.iap2.get(productId);
       console.log('Product Info: ', product);
       this.iap2.order(productId).then((p) => {
-        console.log('Purchase Succesful' + JSON.stringify(p));
+        this.iap2.when(productId).owned((product: IAPProduct) => {
+          console.log(` owned ${product.owned}`);
+          console.log(p);
+          product.finish();
+        });
+        // alert('Purchase Succesful' + JSON.stringify(p));
       }).catch((e) => {
-        console.log('Error Ordering From Store' + e);
+        alert('Error Ordering From Store' + e);
       });
     } catch (err) {
       console.log('Error Ordering ' + JSON.stringify(err));

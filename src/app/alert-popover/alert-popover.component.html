@@ -1,0 +1,57 @@
+<ion-content *ngIf="type == 'subscriptionType'">
+    <ion-list>
+        <ion-item>
+            <h6>
+                Thank you for your interest. To access the full version and new features in the future, we offer you the following forms of subscription:
+            </h6>
+        </ion-item>
+        <ion-item (click)="checkout('kcmesicne')">
+            <p>USD 1.99 per month </p>
+        </ion-item>
+        <ion-item (click)="checkout('kcrocne1')">
+            <p>USD 19 per year</p>
+        </ion-item>
+        <ion-item (click)="discountedCheckout('kcpropredplatitelebalance')">
+            <span>USD .99 Monthly Balance Subscriber</span>
+        </ion-item>
+        <ion-item (click)="restoreExistingSubsription()">
+            <span>Restore</span>
+        </ion-item>
+        <ion-item (click)="cancel()">
+            <p style="color: red;">Perhaps next time</p>
+        </ion-item>
+    </ion-list>
+</ion-content>
+
+<ion-content *ngIf="type == 'trialInfo'" class="ion-padding trialInfo">
+    <h6>
+        Thank you for your interest in our “Mind Machine” mobile app.
+    </h6>
+    <h6>
+        You now have 14 days to use it for free. Mind Machine is available regardless of the data connection of your phone or tablet, and its functions can also be used in flight mode.
+    </h6>
+    <h6>
+        After the free trial, we will offer you the option of a subscription to maintain full content and access to new features.
+    </h6>
+    <div class="agree" (click)="dismiss('trialInfo')">
+        <ion-button>I agree</ion-button>
+    </div>
+</ion-content>
+
+<ion-content *ngIf="type == 'rating'" class="ion-padding trialInfo">
+    <h6>
+        Please, rate our app. Thank you…
+    </h6>
+    <div class="agree">
+        <ion-button (click)="dismiss('false')">Later</ion-button>
+        <ion-button (click)="dismiss('true')">Thank you</ion-button>
+    </div>
+</ion-content>
+
+<ion-content *ngIf="type == 'subscribeConfirm'" class="ion-padding trialInfo">
+    <h6>{{text}} </h6>
+    <div class="agree">
+        <ion-button (click)="dismiss('true')">I would like to know more</ion-button>
+        <ion-button (click)="dismiss('false')">I will think about it</ion-button>
+    </div>
+</ion-content>

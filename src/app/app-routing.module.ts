@@ -3,12 +3,8 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
-  },
-  {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'list-view',
     pathMatch: 'full'
   },
   {
@@ -16,7 +12,7 @@ const routes: Routes = [
     loadChildren: () => import('./list-view/list-view.module').then( m => m.ListViewPageModule)
   },
   {
-    path: 'inner-page',
+    path: 'inner-page/:type/:name',
     loadChildren: () => import('./inner-page/inner-page.module').then( m => m.InnerPagePageModule)
   },
 ];

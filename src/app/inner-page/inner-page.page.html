@@ -1,0 +1,91 @@
+<ion-header>
+    <ion-toolbar mode="ios" class="headerTool">
+        <ion-title>
+            Balance
+        </ion-title>
+        <ion-back-button defaultHref="list-view" mode="md" slot="start"></ion-back-button>
+    </ion-toolbar>
+</ion-header>
+<ion-content class="backgroundImage" *ngIf="type == 'music'">
+    <ion-row class="musicControls">
+        <ion-col size="12" class="ion-text-center">
+            <input type="range" class="range" min="0" max="100" [(ngModel)]="progress" (change)="seek(progress)" />
+        </ion-col>
+        <ion-col size="12">
+            <p class="timePlayed">{{totalTimePlayed}}</p>
+            <p class="totalDuration">{{ duration }}
+            </p>
+        </ion-col>
+        <ion-col size="12" class="ion-text-center">
+            <ion-button fill="clear" (click)="move('backward',progress)">
+                <img src="assets/images/icons8-replay-10-50.png" height="29px">
+            </ion-button>
+
+            <ion-button fill="clear" (click)="togglePlayer(false)" *ngIf="!isPlaying">
+                <ion-icon slot="icon-only" style="font-size: 42px;color: #fff;" name="play"></ion-icon>
+            </ion-button>
+
+            <ion-button fill="clear" (click)="togglePlayer(true)" *ngIf="isPlaying">
+                <ion-icon slot="icon-only" style="font-size: 42px;color: #fff;" name="pause"></ion-icon>
+            </ion-button>
+
+            <ion-button fill="clear" (click)="move('forward',progress)">
+                <img src="assets/images/icons8-forward-10-30.png" height="29px">
+            </ion-button>
+
+        </ion-col>
+    </ion-row>
+</ion-content>
+<ion-content *ngIf="type == 'text'">
+    <ion-row>
+        <ion-col size="12">
+            <p>Werte Psychowalkman-Userin, werter Psychowalkman-User.</p>
+
+            <p>Willkommen in der App, die einer gezielten Arbeit mit Schalfrequenzen und ihrem Einfluss auf den menschlichen Organismus gewidmet ist. Sie wollen bestimmt vor allem die App ausprobieren und daher kommen wir gleich zu dem Minimum an notwendiger
+                Theorie.
+            </p>
+
+            <p>Unser Gehirn arbeitet in Frequenzen, die sich zu einem gewissen Ausmaß von äußeren Stimulationen - durch Klang oder durch Licht - korrigieren lassen. Das Ziel unseres Programms ist es, anhand von wissenschaftlichen Untersuchungen, die Frequenzen
+                sanft in den Bereichen zu modifizieren, die kognitive Leistungssteigerung, aber auch Entspannung, mentale Ruhe und einen guten, erholsamen Schlaf ermöglichen.
+            </p>
+
+            <p>Zurzeit bieten wir Ihnen 3 Grundeinstellungen, "Leistungssteigerung beim Lernen", “Erholsamer Schlaf", und “Tiefe Meditation”.
+            </p>
+
+            <p>Im Gegensatz zu klassischen Psychowalkmans, arbeitet Balance ausschließlich mit Klang. Nach wissenschaftlichen Forschungen beeinflusst Klang das Funktionieren unseres Gehirns sehr stark und der Einfluss auf beide Hemisphären des Gehirns kann
+                effektiv gewährleistet werden.
+            </p>
+
+            <p>Wir empfehlen, dass Sie mit dem einfachsten Programm "Leistungssteigerung beim Lernen" beginnen. Die Frequenzen in diesem Programm wirken stimulierend und Sie können sie überall anwenden. Dieses ist das kürzeste Programm und dauert 15 Minuten.
+                Es spielt sich an der Grenze von Theta und Alfa, die Zielfrequenz ist daher 9 - 10Hz. Hören Sie den isochronen Tönen zu. Nach einer Weile sollten Sie aufhören den Klang bewusst wahrzunehmen und Ihr Gehirn beginnt sich zu reorganisieren.
+            </p>
+
+            <p>Wenn Sie bereits dieses Programm ausprobiert und es als angenehm empfunden haben, können Sie zu den nächsten zwei wechseln. Diese sind fokussiert auf eine intensive Entspannung. Sowohl der "erholsamer Schlaf" als auch die "tiefe Meditation"
+                sind 25 minütige Therapien mit Zielfrequenzen Delta und Theta, 3-7Hz, beziehungsweise in der Schumann-Resonanz, 7-8Hz.
+            </p>
+
+            <p>Für ihre Anwendung empfehlen wir, dass Sie in einer Umgebung sind, in der ihre tiefe Meditation niemanden gefährden kann und wo Ihre Aufmerksamkeit nicht nach außen gerichtet sein muss. Daher empfehlen wir Ihnen, dieses Programm nicht anzuwenden:
+                während des Autofahrens, während der Arbeit sowie überall dort, wo es notwendig ist schnell auf die Außenwelt zu reagieren. Anderseits eignen sich diese zwei Programme hervorragend für gutes Einschlafen und für eine tiefe Meditation.
+            </p>
+
+            <p>Wir empfehlen Ihnen diese Therapie regelmäßig zu wiederholen.</p>
+
+            <p>Um den Psychowalkman zu nützen, ist es notwendig immer Kopfhörer zu verwenden. Das Prinzip des Generierens von Frequenzen unterhalb des hörbaren Bereiches funktioniert mit unterschiedlichen Frequenzen für jedes Ohr, deren Differenz in Ihrem
+                Gehirn die Zielfrequenz kreiert. Aus diesem Grund kann Psychowalkman ohne Kopfhörer nicht funktionieren. Wir danken Ihnen für Ihr Verständnis.
+            </p>
+
+            <p>Nutzen Sie die aktuellen Ergebnisse wissenschaftlicher Forschung von vielen Fachmenschen, um sowohl Ihre kognitive Leistung zu steigern als auch die Phasen zu optimieren, in welchen Sie eine tiefe Erholung brauchen. Direkt in Ihrem Handy.
+                14 Tage gratis zum ausprobieren ohne Bindung.
+            </p>
+            <p>Ihr</p>
+
+            <p>Psychowalkman</p>
+            <br>
+            <br>
+            <p style="text-align: center;color: blue;">balanceapp@balanceapp.org</p>
+            <br>
+            <br>
+            <img src="./assets/images/how-binaural-beats-work.jpeg" alt="">
+        </ion-col>
+    </ion-row>
+</ion-content>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "994991502288",
+    "firebase_url": "https://balanceapp-german.firebaseio.com",
+    "project_id": "balanceapp-german",
+    "storage_bucket": "balanceapp-german.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:994991502288:android:c69d7bc2896801760b3fd5",
+        "android_client_info": {
+          "package_name": "io.german.psychowalkman"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "994991502288-ae1m5mirrhmkui23tjme2lpg8ah8emrp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxohbiWhihIpe5fFgQobGv3bdG_qr5dUQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "994991502288-ae1m5mirrhmkui23tjme2lpg8ah8emrp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

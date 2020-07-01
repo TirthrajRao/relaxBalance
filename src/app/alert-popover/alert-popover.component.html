@@ -1,0 +1,56 @@
+<ion-content *ngIf="type == 'subscriptionType'">
+    <ion-list>
+        <ion-item>
+            <h6>Vielen Dank für Ihr Vertrauen. Um den Zugang zur vollen Version und Neuigkeiten zu gewährleisten, bieten wir Ihnen folgende Abos an:
+            </h6>
+        </ion-item>
+        <ion-item (click)="checkout('kcmesicne')">
+            <p>1.99.Euro pro Monat</p>
+        </ion-item>
+        <ion-item (click)="checkout('kcrocne1')">
+            <p>19 Euro pro Jahr</p>
+        </ion-item>
+        <ion-item (click)="discountedCheckout('kcpropredplatitelebalance')">
+            <span>.99 Euro pro Monat für Balance Abonnenten</span>
+        </ion-item>
+        <ion-item (click)="restoreExistingSubsription()">
+            <span>Erneuern</span>
+        </ion-item>
+        <ion-item (click)="cancel()">
+            <p style="color: red;">Ein anderes Mal </p>
+        </ion-item>
+    </ion-list>
+</ion-content>
+
+<ion-content *ngIf="type == 'trialInfo'" class="ion-padding trialInfo">
+    <h6>
+        Vielen Dank. Willkommen in der Psychowalkman App.
+    </h6>
+    <h6>
+        Sie haben nun 14 Tage, die App gratis und ohne Einschränkungen immer und überall ohne Datenverbindung zu nutzen.
+    </h6>
+    <h6>
+        Danach bieten wir Ihnen die Möglichkeit eines Abos, um den Zugang zum ganzen Inhalt sowie zu den Neuigkeiten zu gewährleisten.
+    </h6>
+    <div class="agree" (click)="dismiss('trialInfo')">
+        <ion-button>Ich bin einverstanden.</ion-button>
+    </div>
+</ion-content>
+
+<ion-content *ngIf="type == 'rating'" class="ion-padding trialInfo">
+    <h6>
+        Bitte bewerten Sie diese App, danke….
+    </h6>
+    <div class="agree">
+        <ion-button (click)="dismiss('false')">Später</ion-button>
+        <ion-button (click)="dismiss('true')">Danke</ion-button>
+    </div>
+</ion-content>
+
+<ion-content *ngIf="type == 'subscribeConfirm'" class="ion-padding trialInfo">
+    <h6>{{text}} </h6>
+    <div class="agree">
+        <ion-button (click)="dismiss('true')">Ich möchte mehr erfahren</ion-button>
+        <ion-button (click)="dismiss('false')">Ich überlege noch</ion-button>
+    </div>
+</ion-content>

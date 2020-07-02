@@ -127,7 +127,7 @@ export class AlertPopoverComponent implements OnInit {
             console.log('Confirm Cancel');
           }
         }, {
-          text: 'Souhlasím',
+          text: 'I agree',
           handler: async (alertData) => {
             if(alertData.discountCode == 'BALANCE'){
               this.checkout(productId);

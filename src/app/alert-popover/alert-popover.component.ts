@@ -95,7 +95,7 @@ export class AlertPopoverComponent implements OnInit {
 
   async cancel() {
     const toast = await this.toastController.create({
-      message: 'Your trial period is over!',
+      message: 'Vaše zkušební doba skončila!',
       duration: 2000
     });
     toast.present();

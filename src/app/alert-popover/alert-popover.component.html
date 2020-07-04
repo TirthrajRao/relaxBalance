@@ -1,0 +1,58 @@
+<ion-content *ngIf="type == 'subscriptionType'">
+    <ion-list>
+        <ion-item>
+            <h6>
+                Merci de votre confiance. Pour accéder à la version complète et aux nouveautés, nous vous proposons les formes d’abonnement suivantes :
+            </h6>
+        </ion-item>
+        <ion-item (click)="checkout('psychowalkmanfr1')">
+            <p>1,99 Euro par mois</p>
+        </ion-item>
+        <ion-item (click)="checkout('psychowalkmanfr2')">
+            <p>19 Euros par an</p>
+        </ion-item>
+        <ion-item (click)="discountedCheckout('psychowalkmanfr3')">
+            <span>.99 Euro Abonné mensuel Balance</span>
+        </ion-item>
+        <ion-item (click)="restoreExistingSubsription()">
+            <span>Rafraîchir </span>
+        </ion-item>
+        <ion-item (click)="cancel()">
+            <p style="color: red;">Peut-être la prochaine fois </p>
+        </ion-item>
+    </ion-list>
+</ion-content>
+
+<ion-content *ngIf="type == 'trialInfo'" class="ion-padding trialInfo">
+    <h6>
+        Je vous remercie. Bienvenue dans l’application Psychowalkman.
+    </h6>
+    <h6>
+        Vous pouvez désormais l’utiliser gratuitement et sans restriction pendant 14 jours. À tout moment et n’importe où avoir besoin d’être connecté.
+    </h6>
+    <h6>
+        Nous vous proposerons ensuite la possibilité de profiter d’un abonnement pour conserver l’intégralité du contenu et l’accès aux nouveautés.
+    </h6>
+    <div class="agree" (click)="dismiss('trialInfo')">
+        <ion-button>J’approuve</ion-button>
+    </div>
+</ion-content>
+
+<ion-content *ngIf="type == 'rating'" class="ion-padding trialInfo">
+    <h6>
+        Veuillez évaluer notre application. Je vous remercie…
+    </h6>
+    <div class="agree">
+        <ion-button (click)="dismiss('false')">Plus tard</ion-button>
+        <ion-button (click)="dismiss('true')">Je vous remercie</ion-button>
+    </div>
+</ion-content>
+
+<ion-content *ngIf="type == 'subscribeConfirm'" class="ion-padding trialInfo">
+    <h6>Cher usager, utilisateur de l’application Psychowalkman. Nous sommes très heureux de pouvoir vous aider pendant 14 jours. Merci de soutenir votre santé et notre travail en vous abonnant. Vous aurez la possibilité de continuer à utiliser Psychowalkman
+        et d’accéder aux nouveautés. </h6>
+    <div class="agree">
+        <ion-button (click)="dismiss('true')" style="font-size: 11px;">Pour de plus amples informations</ion-button>
+        <ion-button (click)="dismiss('false')">Je vais encore réfléchir</ion-button>
+    </div>
+</ion-content>

@@ -1,5 +1,7 @@
 {
   "name": "relaxAppFrench",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

@@ -11,13 +11,13 @@ import { ToastController, PopoverController, AlertController } from '@ionic/angu
 export class AlertPopoverComponent implements OnInit {
   product: IAPProduct;
   productId = [{
-    id: 'kcmesicne',
+    id: 'psychowalkmande1',
     type: this.iap2.PAID_SUBSCRIPTION
   }, {
-    id: 'kcrocne1',
+    id: 'psychowalkmande2',
     type: this.iap2.PAID_SUBSCRIPTION
   }, {
-    id: 'kcpropredplatitelebalance',
+    id: 'psychowalkmande3',
     type: this.iap2.PAID_SUBSCRIPTION
   }
   ]

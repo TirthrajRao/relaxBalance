@@ -1,5 +1,7 @@
 {
   "name": "relaxAppChinese",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

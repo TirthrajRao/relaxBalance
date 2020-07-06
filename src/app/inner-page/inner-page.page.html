@@ -1,0 +1,71 @@
+<ion-header>
+    <ion-toolbar mode="ios" class="headerTool">
+        <ion-title>
+            Balance
+        </ion-title>
+        <ion-back-button defaultHref="list-view" mode="md" slot="start"></ion-back-button>
+    </ion-toolbar>
+</ion-header>
+<ion-content class="backgroundImage" *ngIf="type == 'music'">
+    <ion-row class="musicControls">
+        <ion-col size="12" class="ion-text-center">
+            <input type="range" class="range" min="0" max="100" [(ngModel)]="progress" (change)="seek(progress)" />
+        </ion-col>
+        <ion-col size="12">
+            <p class="timePlayed">{{totalTimePlayed}}</p>
+            <p class="totalDuration">{{ duration }}
+            </p>
+        </ion-col>
+        <ion-col size="12" class="ion-text-center">
+            <ion-button fill="clear" (click)="move('backward',progress)">
+                <img src="assets/images/icons8-replay-10-50.png" height="29px">
+            </ion-button>
+
+            <ion-button fill="clear" (click)="togglePlayer(false)" *ngIf="!isPlaying">
+                <ion-icon slot="icon-only" style="font-size: 42px;color: #fff;" name="play"></ion-icon>
+            </ion-button>
+
+            <ion-button fill="clear" (click)="togglePlayer(true)" *ngIf="isPlaying">
+                <ion-icon slot="icon-only" style="font-size: 42px;color: #fff;" name="pause"></ion-icon>
+            </ion-button>
+
+            <ion-button fill="clear" (click)="move('forward',progress)">
+                <img src="assets/images/icons8-forward-10-30.png" height="29px">
+            </ion-button>
+
+        </ion-col>
+    </ion-row>
+</ion-content>
+<ion-content *ngIf="type == 'text'">
+    <ion-row>
+        <ion-col size="12">
+            <p>
+                尊敬的 “Psychowalkman” 用户：
+            </p>
+            <p>
+                欢迎使用这款应用程序，其致力于利用波长及其对有机体的作用来发挥针对性的作用。您一定希望试用此功能，因此让我们来了解其最基本的理论：
+            </p>
+            <p>
+                我们的大脑以某种频率运作，在一定程度上可以通过外界刺激（不管是声音还是光）来调整此频率。我们的程序目标在于轻柔逐步地将此频率调整到一定水平，从而支持激活思考、休息、放松以及良好的睡眠质量。
+            </p>
+            <p>
+                现在，我们提供三种基本设置： “改善学习”、“更佳睡眠”和“深度冥想”。不管手机或平板电脑是否开启数据连接，这三种设置都可以使用，在飞行模式下也可使用。下一个应用程序版本将增加其他设置。
+            </p>
+            <p>
+                与传统的 psychowalkman不同，Balance Mind Machine 仅利用声音而不是光来运作。这是因为应用程序安装在手机上的缘故。根据科学研究，声音显著影响大脑的运作，所以在没有视觉刺激的情况下，声音对两大脑半球的影响是显著的。请试用我们的音频 psychowalkman，您将在短时间内看到显著效果。
+            </p>
+            <p>
+                我们建议您从使用要求最低的程序“改善学习”开始，该程序用作频率刺激组。程序时长 15 分钟，在所有程序中用时最短，工作时临近 Theta 和 Alpha 水平，即目标频率 9-10 Hz。请倾听所谓的同步音调，一会儿之后，您应停止感知该声音，而您的大脑将逐渐“重新调整”。 如果您已试用过此程序并且获得良好的体验，您则可以继续试用其他两个强静心程序。“更佳睡眠”和“深度冥想”均为25 分钟的疗法， 目标频率分别为：Delta 与 Theta 水平 ，3-7 赫兹；舒曼共振， 7-8 赫兹。
+            </p>
+            <p>
+                要这两个程序，我们建议您身处这样的环境：大脑的深度冥想不会危及任何人，且这种环境无需您的注意力高度集中。因此，我们不建议在开车或工作时或在必须对周围活动做出迅速反应的情形中使用这两个程序。相反，这两个程序适合入眠和深度冥想。 我们建议定期重复此治疗方法。 要使用 Balance Mind Machine功能，您必须始终佩戴耳机。产生低于可听频带的频率的原理需要使用每个耳朵的不同频率来运作，两种频率之差即为您大脑的目标频率。为此，很遗憾，如果不佩戴耳机，Psychowalkman 将无法工作。谢谢您的理解。
+            </p>
+            <p>
+                此致， Psychowalkman
+            </p>
+            <br>
+            <br>
+            <img src="./assets/images/how-binaural-beats-work.jpeg" alt="">
+        </ion-col>
+    </ion-row>
+</ion-content>

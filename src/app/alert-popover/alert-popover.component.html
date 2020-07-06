@@ -1,0 +1,57 @@
+<ion-content *ngIf="type == 'subscriptionType'">
+    <ion-list>
+        <ion-item>
+            <h6>
+                谢谢您对我们的产品产生兴趣。为了让您在未来拥有完整的版本和新功能，我们向您提供以下订阅方式
+            </h6>
+        </ion-item>
+        <ion-item (click)="checkout('psychowalkmanch1')">
+            <p>15¥/月 </p>
+        </ion-item>
+        <ion-item (click)="checkout('psychowalkmanch2')">
+            <p>150 ¥/年 </p>
+        </ion-item>
+        <ion-item (click)="discountedCheckout('psychowalkmanch3')">
+            <span> 8 ¥适用于Balance 按月订阅者 </span>
+        </ion-item>
+        <ion-item (click)="restoreExistingSubsription()">
+            <span>恢复 </span>
+        </ion-item>
+        <ion-item (click)="cancel()">
+            <p style="color: red;">可能下次会订阅 </p>
+        </ion-item>
+    </ion-list>
+</ion-content>
+
+<ion-content *ngIf="type == 'trialInfo'" class="ion-padding trialInfo">
+    <h6>
+        谢谢您对我们的 “Psychowalkman”手机应用程序感兴趣。
+    </h6>
+    <h6>
+        您现在拥有14天的免费试用期。不管您的手机或平板电脑的数据连接为何种类型，均可使用Mind Machine 。在飞行模式下，其各项功能仍可使用。
+    </h6>
+    <h6>
+        免费试用后，我们将提供订阅方案供您选择，让您拥有新功能的全部内容和访问权限。
+    </h6>
+    <div class="agree" (click)="dismiss('trialInfo')">
+        <ion-button>我同意</ion-button>
+    </div>
+</ion-content>
+
+<ion-content *ngIf="type == 'rating'" class="ion-padding trialInfo">
+    <h6>
+        请对我们的应用进行评价。谢谢……
+    </h6>
+    <div class="agree">
+        <ion-button (click)="dismiss('false')">稍后</ion-button>
+        <ion-button (click)="dismiss('true')">谢谢</ion-button>
+    </div>
+</ion-content>
+
+<ion-content *ngIf="type == 'subscribeConfirm'" class="ion-padding trialInfo">
+    <h6>{{text}} </h6>
+    <div class="agree">
+        <ion-button (click)="dismiss('true')">我希望了解更多信息</ion-button>
+        <ion-button (click)="dismiss('false')">我会考虑一下</ion-button>
+    </div>
+</ion-content>

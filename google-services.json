@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "358749220922",
+    "firebase_url": "https://balanceapp-chinese.firebaseio.com",
+    "project_id": "balanceapp-chinese",
+    "storage_bucket": "balanceapp-chinese.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:358749220922:android:c53c67be83b0e6cfadc503",
+        "android_client_info": {
+          "package_name": "io.chinese.psychowalkman"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "358749220922-q4m9o0a7vv475dl73lopbunlqm56eh1j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqBuKNZcUvoD7kYR5zGWBZeGY2wCxNX98"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "358749220922-q4m9o0a7vv475dl73lopbunlqm56eh1j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

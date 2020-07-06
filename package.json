@@ -28,6 +28,7 @@
     "@ionic/angular": "^5.0.0",
     "cc.fovea.cordova.purchase": "^10.1.1",
     "cordova-android": "^8.1.0",
+    "cordova-ios": "^5.1.1",
     "cordova-plugin-fcm-with-dependecy-updated": "^6.4.3",
     "cordova-plugin-market": "^1.2.0",
     "howler": "^2.2.0",
@@ -44,6 +45,7 @@
     "@angular/compiler-cli": "~9.1.6",
     "@angular/language-service": "~9.1.6",
     "@ionic/angular-toolkit": "^2.1.1",
+    "@ionic/lab": "3.1.7",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",
@@ -88,7 +90,8 @@
       }
     },
     "platforms": [
-      "android"
+      "android",
+      "ios"
     ]
   }
 }

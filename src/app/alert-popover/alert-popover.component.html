@@ -1,0 +1,57 @@
+<ion-content *ngIf="type == 'subscriptionType'">
+    <ion-list>
+        <ion-item>
+            <h6>
+                관심을 가져 주셔서 감사합니다. 향후 정식 버전 및 새로운 기능에 액세스하실 수 있도록, 다음과 같은 구독 옵션을 제공합니다:
+            </h6>
+        </ion-item>
+        <ion-item (click)="checkout('psychowalkmankr1')">
+            <p>월 ₩ 2.399 </p>
+        </ion-item>
+        <ion-item (click)="checkout('psychowalkmankr2')">
+            <p>월 ₩ 23.999 </p>
+        </ion-item>
+        <ion-item (click)="discountedCheckout('psychowalkmankr3')">
+            <span> ₩ 1.199 월별 발란스 가입자 </span>
+        </ion-item>
+        <ion-item (click)="restoreExistingSubsription()">
+            <span>복원 </span>
+        </ion-item>
+        <ion-item (click)="cancel()">
+            <p style="color: red;">다음에 </p>
+        </ion-item>
+    </ion-list>
+</ion-content>
+
+<ion-content *ngIf="type == 'trialInfo'" class="ion-padding trialInfo">
+    <h6>
+        싸이코워크맨 모바일 앱에 관심을 가져주셔서 감사합니다.
+    </h6>
+    <h6>
+        이제 14일 동안 무료로 사용하실 수 있습니다. 싸이코워크맨 은 스마트폰이나 태블릿의 데이터 연결에 관계없이 사용 할 수 있으며 비행 모드에서도 해당 기능을 사용 할 수 있습니다.
+    </h6>
+    <h6>
+        무료 평가판 사용 후에는 전체 컨텐츠를 유지하고 새로운 기능에 액세스 할 수 있는 구독 옵션을 제공합니다.
+    </h6>
+    <div class="agree" (click)="dismiss('trialInfo')">
+        <ion-button>동의합니다</ion-button>
+    </div>
+</ion-content>
+
+<ion-content *ngIf="type == 'rating'" class="ion-padding trialInfo">
+    <h6>
+        앱을 평가하여 주세요. 감사합니다…
+    </h6>
+    <div class="agree">
+        <ion-button (click)="dismiss('false')">나중에</ion-button>
+        <ion-button (click)="dismiss('true')">감사합니다</ion-button>
+    </div>
+</ion-content>
+
+<ion-content *ngIf="type == 'subscribeConfirm'" class="ion-padding trialInfo">
+    <h6>{{text}} </h6>
+    <div class="agree">
+        <ion-button (click)="dismiss('true')">더 알고 싶습니다</ion-button>
+        <ion-button (click)="dismiss('false')">생각해보겠습니다</ion-button>
+    </div>
+</ion-content>

@@ -1,0 +1,55 @@
+<ion-header>
+    <ion-toolbar mode="ios" class="headerTool">
+        <ion-title>
+            Balance
+        </ion-title>
+        <ion-back-button defaultHref="list-view" mode="md" slot="start"></ion-back-button>
+    </ion-toolbar>
+</ion-header>
+<ion-content class="backgroundImage" *ngIf="type == 'music'">
+    <ion-row class="musicControls">
+        <ion-col size="12" class="ion-text-center">
+            <input type="range" class="range" min="0" max="100" [(ngModel)]="progress" (change)="seek(progress)" />
+        </ion-col>
+        <ion-col size="12">
+            <p class="timePlayed">{{totalTimePlayed}}</p>
+            <p class="totalDuration">{{ duration }}
+            </p>
+        </ion-col>
+        <ion-col size="12" class="ion-text-center">
+            <ion-button fill="clear" (click)="move('backward',progress)">
+                <img src="assets/images/icons8-replay-10-50.png" height="29px">
+            </ion-button>
+
+            <ion-button fill="clear" (click)="togglePlayer(false)" *ngIf="!isPlaying">
+                <ion-icon slot="icon-only" style="font-size: 42px;color: #fff;" name="play"></ion-icon>
+            </ion-button>
+
+            <ion-button fill="clear" (click)="togglePlayer(true)" *ngIf="isPlaying">
+                <ion-icon slot="icon-only" style="font-size: 42px;color: #fff;" name="pause"></ion-icon>
+            </ion-button>
+
+            <ion-button fill="clear" (click)="move('forward',progress)">
+                <img src="assets/images/icons8-forward-10-30.png" height="29px">
+            </ion-button>
+
+        </ion-col>
+    </ion-row>
+</ion-content>
+<ion-content *ngIf="type == 'text'">
+    <ion-row>
+        <ion-col size="12">
+            <p>
+                “싸이코워크맨” 사용자 분께, 주파수 및 주파수가 유기체에 미치는 영향에 타겟을 맞춘 싸이코워크맨 애플리케이션에 오신 것을 환영합니다. 되도록 빨리 이 기능을 사용해보실 수 있도록, 이론은 최소한으로만 설명 드리겠습니다; 우리의 뇌는 소리 또는 빛과 같은 외부 자극에 의해 어느 정도 조절 될 수 있는 일정 주파수에서 작동합니다. 우리 프로그램의 목표는 사고, 휴식, 안정 및 질 좋은 수면의 활성화를 지원하는 수준으로 이 주파수를 부드럽게 그리고
+                점차적으로 조정하는 것입니다. 현재 “학습 개선”, “수면 개선” 및 “깊은 명상”이라는 세 가지 기본 설정을 제공합니다. 스마트폰이나 태블릿의 데이터 연결여부에 관계없이 모두 사용할 수 있으며, 비행 모드에서도 사용할 수 있습니다. 애플리케이션의 차기 버전에는 추가 설정이 추가됩니다. 기존 싸이코워크맨과는 달리, 싸이코워크맨 은 빛이 아닌 소리로만 작동합니다. 이는 사용자 스마트폰 내 인스톨레이션에 의한 것입니다.
+                과학적 연구에 따르면, 소리는 뇌의 기능에 큰 영향을 미치므로, 시각적인 자극이 없는 경우에도 뇌의 반구 모두에 미치는 영향이 눈에 띄게 나타납니다. 오디오 싸이코워크맨 사용 시 단시간에 더 강력한 효과를 느끼실 수 있습니다. 가장 부담없이 사용할 수 있는 프로그램인 "학습 개선"으로 시작하는 것을 추천하여 드립니다. 이 프로그램은 걱정없이 어디서나 사용할 수 있는 주파수 자극 세트 역할을 합니다. 프로그램 길이는 15분으로
+                가장 짧습니다. 또한 세타 및 알파 레벨의 경계에서 발생하며 타겟 주파수는 9-10Hz입니다. 소위 등시성 (isochronous) 톤을 듣고 잠시 후에는 소리 감지를 중단하여야 합니다. 사용자의 두뇌가 점차 "재프로그램" 될 것입니다. 이 프로그램을 이미 사용해 보았으며, 좋은 경험이 되었다면, 강렬한 진정에 보다 중점을 둔 다른 두 프로그램으로 넘어가실 수 있습니다. "수면 개선"과 "깊은 명상"은 각각 타겟 레벨
+                3-7Hz의 델타와 세타 레벨, 타겟 레벨 7-8Hz의 슈만 공명을 제공하는 25분 테라피입니다. 이들 프로그램을 사용할 때에는, 뇌의 깊은 명상으로 인해 타인을 위험에 빠뜨릴 수도 있는 환경과 최대한의 주의가 필요한 환경은 피하시는 것이 좋습니다. 따라서 주변 환경에 빠르게 반응해야 하는 운전이나 직장에서는 사용하지 않는 것이 좋습니다. 반대로, 잠들거나 깊은 명상에는 적합합니다. 이 테라피를 정기적으로 반복할 것을
+                권해드립니다. 싸이코워크맨 기능을 사용하려면 항상 헤드폰이 켜져 있어야 합니다. 가청 대역 아래에서 주파수를 생성하는 원리는 각 귀에 대해 다른 주파수가 전달되는 경우 작동하며, 다른 주파수 간의 차이가 뇌의 타겟 주파수가 됩니다. 이러한 이유로, 싸이코워크맨은 안타깝게도 헤드폰 없이는 작동되지 않습니다. 이해하여 주시기 바랍니다. 감사합니다, 싸이코워크맨
+            </p>
+            <br>
+            <br>
+            <img src="./assets/images/how-binaural-beats-work.jpeg" alt="">
+        </ion-col>
+    </ion-row>
+</ion-content>

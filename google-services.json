@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "804380949565",
+    "firebase_url": "https://balanceapp-korean.firebaseio.com",
+    "project_id": "balanceapp-korean",
+    "storage_bucket": "balanceapp-korean.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:804380949565:android:554a6ffe4eafea0f0e7e54",
+        "android_client_info": {
+          "package_name": "io.korea.psychowalkman"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "804380949565-k0v0i35ffrr2b4h9fp6qkljgnerokecp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZQGquop4fluwvDNBOKPVT0OFwnpS_1qU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "804380949565-k0v0i35ffrr2b4h9fp6qkljgnerokecp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

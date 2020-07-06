@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>994991502288-9qhpg0npcf00f2uufc0u3fjalk27qeuu.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.994991502288-9qhpg0npcf00f2uufc0u3fjalk27qeuu</string>
+	<key>API_KEY</key>
+	<string>AIzaSyALqQconsD71NPiaJlKNv0hBd-44g3VbUk</string>
+	<key>GCM_SENDER_ID</key>
+	<string>994991502288</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>io.german.psychowalkman</string>
+	<key>PROJECT_ID</key>
+	<string>balanceapp-german</string>
+	<key>STORAGE_BUCKET</key>
+	<string>balanceapp-german.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:994991502288:ios:efeb4d51f7fb42d70b3fd5</string>
+	<key>DATABASE_URL</key>
+	<string>https://balanceapp-german.firebaseio.com</string>
+</dict>
+</plist>

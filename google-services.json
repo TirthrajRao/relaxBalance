@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "829293010619",
+    "firebase_url": "https://balanceapp-japanees.firebaseio.com",
+    "project_id": "balanceapp-japanees",
+    "storage_bucket": "balanceapp-japanees.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:829293010619:android:e8306e3482ee92cdb3939e",
+        "android_client_info": {
+          "package_name": "io.japanees.psychowalkman"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "829293010619-cce1m5ud909v4jl7dvqpr4caf61jjtll.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-VROLW6drvwiPIfi7dbKFlhotwQw7MTk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "829293010619-cce1m5ud909v4jl7dvqpr4caf61jjtll.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

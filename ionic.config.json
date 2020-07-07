@@ -1,5 +1,7 @@
 {
   "name": "relaxAppJapan",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

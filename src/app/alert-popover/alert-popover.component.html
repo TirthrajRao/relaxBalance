@@ -1,0 +1,54 @@
+<ion-content *ngIf="type == 'subscriptionType'">
+    <ion-list>
+        <ion-item>
+            <h6>
+                この度は、ご利用くださいましてありがとうございました。今後、アプリのフルバージョンと新機能をご利用いただくには、以下の有料オプションをご利用ください。
+            </h6>
+        </ion-item>
+        <ion-item (click)="checkout('mindmachine1')">
+            <p> 199 円 ドル/月 </p>
+        </ion-item>
+        <ion-item (click)="checkout('mindmachine2')">
+            <p>1999 円 ドル/年 </p>
+        </ion-item>
+        <ion-item (click)="discountedCheckout('mindmachine3')">
+            <span>99 円 ドル /月次定期購入者 </span>
+        </ion-item>
+        <ion-item (click)="restoreExistingSubsription()">
+            <span>リストア（復元）する </span>
+        </ion-item>
+        <ion-item (click)="cancel()">
+            <p style="color: red;">おそらく次の機会に </p>
+        </ion-item>
+    </ion-list>
+</ion-content>
+
+<ion-content *ngIf="type == 'trialInfo'" class="ion-padding trialInfo">
+    <h6>
+        携帯アプリ「マインドマシン」をご利用いただきありがとうございます。
+    </h6>
+    <h6>
+        これより14日間、無料でアプリをお試しいただけます。マインドマシンは、携帯電話やタブレットのインターネット接続状況にかかわらずご利用いただけます。そのため、機内モードでも使用可能です。無料体験期間終了後には、フルコンテンツおよび新機能にアクセス可能な有料オプションをご利用ください。
+    </h6>
+    <div class="agree" (click)="dismiss('trialInfo')">
+        <ion-button>同意します</ion-button>
+    </div>
+</ion-content>
+
+<ion-content *ngIf="type == 'rating'" class="ion-padding trialInfo">
+    <h6>
+        アプリを評価してください。ありがとうございます。
+    </h6>
+    <div class="agree">
+        <ion-button (click)="dismiss('false')">後で</ion-button>
+        <ion-button (click)="dismiss('true')">ありがとうございます</ion-button>
+    </div>
+</ion-content>
+
+<ion-content *ngIf="type == 'subscribeConfirm'" class="ion-padding trialInfo">
+    <h6>マインドマシン・ユーザーの皆様、この14日間において皆様のお役に立つことができて光栄です。今後は、フルコンテンツおよび新機能にアクセス可能な有料オプションをご利用くださいますようお願いします。 </h6>
+    <div class="agree">
+        <ion-button (click)="dismiss('true')">もっと知りたい</ion-button>
+        <ion-button (click)="dismiss('false')">検討する</ion-button>
+    </div>
+</ion-content>

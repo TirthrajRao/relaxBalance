@@ -10,17 +10,7 @@ import { ToastController, PopoverController, AlertController } from '@ionic/angu
 })
 export class AlertPopoverComponent implements OnInit {
   product: IAPProduct;
-  productId = [{
-    id: 'kcmesicne',
-    type: this.iap2.PAID_SUBSCRIPTION
-  }, {
-    id: 'kcrocne1',
-    type: this.iap2.PAID_SUBSCRIPTION
-  }, {
-    id: 'kcpropredplatitelebalance',
-    type: this.iap2.PAID_SUBSCRIPTION
-  }
-  ]
+  productId : any;
   modalType: any;
   text: any;
   constructor(
@@ -30,10 +20,11 @@ export class AlertPopoverComponent implements OnInit {
     public platform: Platform,
     private iap2: InAppPurchase2,
     private navParams: NavParams
-
   ) { }
 
   ngOnInit() {
+    this.setProductIds();
+    console.log(this.productId)
     this.platform.ready().then(async () => {
       this.setup();
     });
@@ -42,9 +33,39 @@ export class AlertPopoverComponent implements OnInit {
     console.log(this.modalType);
   }
 
+  setProductIds(){
+    if(this.platform.is('ios')){
+      this.productId = [{
+        id: 'kcmesicne_ios',
+        type: this.iap2.PAID_SUBSCRIPTION
+      }, {
+        id: 'kcrocne1_ios',
+        type: this.iap2.PAID_SUBSCRIPTION
+      }, {
+        id: 'kcpropredplatitelebalance_ios',
+        type: this.iap2.PAID_SUBSCRIPTION
+      }
+      ]
+    }else{
+      this.productId = [{
+        id: 'kcmesicne',
+        type: this.iap2.PAID_SUBSCRIPTION
+      }, {
+        id: 'kcrocne1',
+        type: this.iap2.PAID_SUBSCRIPTION
+      }, {
+        id: 'kcpropredplatitelebalance',
+        type: this.iap2.PAID_SUBSCRIPTION
+      }
+      ]
+    }
+  }
   setup() {
     this.iap2.register(this.productId);
     this.iap2.refresh();
+    setTimeout(() => {
+      console.log(new Date(JSON.parse(this.iap2.get(this.productId[1].id).transaction.receipt).purchaseTime))
+    }, 3000);
   }
 
   registerHandlersForPurchase(productId) {

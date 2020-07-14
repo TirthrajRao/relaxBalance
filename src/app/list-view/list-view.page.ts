@@ -85,7 +85,7 @@ export class ListViewPage implements OnInit {
     console.log(noOfDaysTrial)
     let text;
     text = 'Dear Mind Machine user, we are very happy to be able to help you for 14 days. Please consider subscribing to one of our plans to maintain full content and access to new features.'
-    if (noOfDaysTrial > 14) {
+    // if (noOfDaysTrial > 14) {
       const popoverTrialEnd = await this.popoverController.create({
         componentProps: {
           'type': 'subscribeConfirm',
@@ -118,7 +118,7 @@ export class ListViewPage implements OnInit {
         }
         localStorage.setItem('firstDismiss', 'true')
       })
-    }
+    // }
   }
 
   async userTrialInfoFirstTime() {

@@ -45,6 +45,9 @@ export class AlertPopoverComponent implements OnInit {
   setup() {
     this.iap2.register(this.productId);
     this.iap2.refresh();
+    setTimeout(() => {
+      console.log(this.iap2.get(this.productId[1].id))
+    }, 2000);
   }
 
   registerHandlersForPurchase(productId) {

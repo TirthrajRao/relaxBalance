@@ -89,40 +89,40 @@ export class ListViewPage implements OnInit {
     } else {
       text = 'Vážená uživatelko, uživateli aplikace PsychowalkmanJsem moc rád, že Vás zajímám. Zvolte si, prosím, formu předplatného.'
     }
-    if (noOfDaysTrial > 14) {
-      const popoverTrialEnd = await this.popoverController.create({
-        componentProps: {
-          'type': 'subscribeConfirm',
-          'text': text
-        },
-        component: AlertPopoverComponent,
-        cssClass: 'my-custom-class',
-        translucent: true,
-        backdropDismiss: false
-      });
-      await popoverTrialEnd.present();
+    // if (noOfDaysTrial > 14) {
+    const popoverTrialEnd = await this.popoverController.create({
+      componentProps: {
+        'type': 'subscribeConfirm',
+        'text': text
+      },
+      component: AlertPopoverComponent,
+      cssClass: 'my-custom-class',
+      translucent: true,
+      backdropDismiss: false
+    });
+    await popoverTrialEnd.present();
 
-      popoverTrialEnd.onDidDismiss().then(async (res: any) => {
-        if (res.data == 'true') {
-          const popoverSubscribe = await this.popoverController.create({
-            componentProps: {
-              'type': 'subscriptionType'
-            },
-            component: AlertPopoverComponent,
-            cssClass: 'my-custom-class',
-            translucent: true,
-            backdropDismiss: false
-          });
-          await popoverSubscribe.present();
-          popoverSubscribe.onDidDismiss().then(async (res: any) => {
-            if (!localStorage.getItem('firstDismiss')) {
-              localStorage.setItem('firstDismiss', 'true')
-            }
-          })
-        }
-        localStorage.setItem('firstDismiss', 'true')
-      })
-    }
+    popoverTrialEnd.onDidDismiss().then(async (res: any) => {
+      if (res.data == 'true') {
+        const popoverSubscribe = await this.popoverController.create({
+          componentProps: {
+            'type': 'subscriptionType'
+          },
+          component: AlertPopoverComponent,
+          cssClass: 'my-custom-class',
+          translucent: true,
+          backdropDismiss: false
+        });
+        await popoverSubscribe.present();
+        popoverSubscribe.onDidDismiss().then(async (res: any) => {
+          if (!localStorage.getItem('firstDismiss')) {
+            localStorage.setItem('firstDismiss', 'true')
+          }
+        })
+      }
+      localStorage.setItem('firstDismiss', 'true')
+    })
+    // }
   }
 
   async userTrialInfoFirstTime() {

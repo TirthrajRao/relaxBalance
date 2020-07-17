@@ -82,41 +82,41 @@ export class ListViewPage implements OnInit {
     let noOfDaysTrial = end.diff(start, 'days');
     console.log(noOfDaysTrial)
     let text;
-      text = 'Wir freuen uns sehr, dass wir Ihnen schon seit 14 Tagen helfen können. Bitte erwägen Sie nun, ob Sie Ihre Gesundheit und unsere Arbeit mit einem Abo  unterstützen wollen. Im Rahmen eines Abos können Sie den Psychowalkman weiterhin nützen und Sie erhalten auch den Zugang zu allen Neuigkeiten.'
-    if (noOfDaysTrial > 14) {
-      const popoverTrialEnd = await this.popoverController.create({
-        componentProps: {
-          'type': 'subscribeConfirm',
-          'text': text
-        },
-        component: AlertPopoverComponent,
-        cssClass: 'my-custom-class',
-        translucent: true,
-        backdropDismiss: false
-      });
-      await popoverTrialEnd.present();
+    text = 'Wir freuen uns sehr, dass wir Ihnen schon seit 14 Tagen helfen können. Bitte erwägen Sie nun, ob Sie Ihre Gesundheit und unsere Arbeit mit einem Abo  unterstützen wollen. Im Rahmen eines Abos können Sie den Psychowalkman weiterhin nützen und Sie erhalten auch den Zugang zu allen Neuigkeiten.'
+    // if (noOfDaysTrial > 14) {
+    const popoverTrialEnd = await this.popoverController.create({
+      componentProps: {
+        'type': 'subscribeConfirm',
+        'text': text
+      },
+      component: AlertPopoverComponent,
+      cssClass: 'my-custom-class',
+      translucent: true,
+      backdropDismiss: false
+    });
+    await popoverTrialEnd.present();
 
-      popoverTrialEnd.onDidDismiss().then(async (res: any) => {
-        if (res.data == 'true') {
-          const popoverSubscribe = await this.popoverController.create({
-            componentProps: {
-              'type': 'subscriptionType'
-            },
-            component: AlertPopoverComponent,
-            cssClass: 'my-custom-class',
-            translucent: true,
-            backdropDismiss: false
-          });
-          await popoverSubscribe.present();
-          popoverSubscribe.onDidDismiss().then(async (res: any) => {
-            if (!localStorage.getItem('firstDismiss')) {
-              localStorage.setItem('firstDismiss', 'true')
-            }
-          })
-        }
-        localStorage.setItem('firstDismiss', 'true')
-      })
-    }
+    popoverTrialEnd.onDidDismiss().then(async (res: any) => {
+      if (res.data == 'true') {
+        const popoverSubscribe = await this.popoverController.create({
+          componentProps: {
+            'type': 'subscriptionType'
+          },
+          component: AlertPopoverComponent,
+          cssClass: 'my-custom-class',
+          translucent: true,
+          backdropDismiss: false
+        });
+        await popoverSubscribe.present();
+        popoverSubscribe.onDidDismiss().then(async (res: any) => {
+          if (!localStorage.getItem('firstDismiss')) {
+            localStorage.setItem('firstDismiss', 'true')
+          }
+        })
+      }
+      localStorage.setItem('firstDismiss', 'true')
+    })
+    // }
   }
 
   async userTrialInfoFirstTime() {

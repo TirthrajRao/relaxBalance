@@ -1,4 +1,4 @@
-<ion-content *ngIf="type == 'subscriptionType'">
+<ion-content *ngIf="type == 'subscriptionType' && deviceType == 'android'">
     <ion-list>
         <ion-item>
             <h6>Děkujeme vám za zájem o naší aplikaci Psychowalkman. Pokud jí chcete využívat i nadále, vyberte si prosím předplatné:
@@ -11,6 +11,29 @@
             <p>499,- Kč ročně</p>
         </ion-item>
         <ion-item (click)="discountedCheckout('kcpropredplatitelebalance')">
+            <span>29,- Kč pro předplatitele Balance</span>
+        </ion-item>
+        <ion-item (click)="restoreExistingSubsription()">
+            <span>Obnovit</span>
+        </ion-item>
+        <ion-item (click)="cancel()">
+            <p style="color: red;"> Možná později</p>
+        </ion-item>
+    </ion-list>
+</ion-content>
+<ion-content *ngIf="type == 'subscriptionType' && deviceType == 'ios'">
+    <ion-list>
+        <ion-item>
+            <h6>Děkujeme vám za zájem o naší aplikaci Psychowalkman. Pokud jí chcete využívat i nadále, vyberte si prosím předplatné:
+            </h6>
+        </ion-item>
+        <ion-item (click)="checkout('kcmesicne_ios')">
+            <p>49,- Kč měsíčně </p>
+        </ion-item>
+        <ion-item (click)="checkout('kcrocne1_ios')">
+            <p>499,- Kč ročně</p>
+        </ion-item>
+        <ion-item (click)="discountedCheckout('kcpropredplatitelebalance_ios')">
             <span>29,- Kč pro předplatitele Balance</span>
         </ion-item>
         <ion-item (click)="restoreExistingSubsription()">

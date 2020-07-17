@@ -13,6 +13,7 @@ export class AlertPopoverComponent implements OnInit {
   productId : any;
   modalType: any;
   text: any;
+  deviceType: string;
   constructor(
     public toastController: ToastController,
     public alertController: AlertController,
@@ -31,6 +32,11 @@ export class AlertPopoverComponent implements OnInit {
     this.modalType = this.navParams.data.type;
     this.text = this.navParams.data.text;
     console.log(this.modalType);
+    if(this.platform.is('ios')){
+      this.deviceType = 'ios'
+    }else{
+      this.deviceType = 'android'
+    }
   }
 
   setProductIds(){

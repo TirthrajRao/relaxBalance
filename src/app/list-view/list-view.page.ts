@@ -84,7 +84,7 @@ export class ListViewPage implements OnInit {
     let noOfDaysTrial = end.diff(start, 'days');
     console.log(noOfDaysTrial)
     
-    if (noOfDaysTrial > 14) {
+    // if (noOfDaysTrial > 14) {
       const popoverTrialEnd = await this.popoverController.create({
         componentProps: {
           'type': 'subscribeConfirm'
@@ -116,7 +116,7 @@ export class ListViewPage implements OnInit {
         }
         localStorage.setItem('firstDismiss', 'true')
       })
-    }
+    // }
   }
 
   async userTrialInfoFirstTime() {

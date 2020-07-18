@@ -83,7 +83,7 @@ export class ListViewPage implements OnInit {
     console.log(noOfDaysTrial)
     let text;
     text = '싸이코워크맨 사용자 여러분, 14일 동안 도와드릴 수 있게 되어 기쁩니다. 저희 플랜 중 하나를 구독해 보시기 바랍니다. 전체 내용을 유지하고 새로운 기능에 액세스 할 수 있게 됩니다.'
-    if (noOfDaysTrial > 14) {
+    // if (noOfDaysTrial > 14) {
       const popoverTrialEnd = await this.popoverController.create({
         componentProps: {
           'type': 'subscribeConfirm',
@@ -116,7 +116,7 @@ export class ListViewPage implements OnInit {
         }
         localStorage.setItem('firstDismiss', 'true')
       })
-    }
+    // }
   }
 
   async userTrialInfoFirstTime() {

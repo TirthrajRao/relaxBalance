@@ -19,3 +19,30 @@
 .my-custom-class .popover-content {
     width: 322230px;
 }
+
+ion-slide div {
+    width: auto !important;
+}
+
+ion-slide {
+    height: 100vh;
+}
+
+.slideLogo img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: auto;
+    bottom: 40%;
+}
+
+.slideContent p {
+    font-weight: 600;
+    margin: 0px 4%;
+}
+
+.continueBtn {
+    position: absolute;
+    bottom: 10vh;
+}

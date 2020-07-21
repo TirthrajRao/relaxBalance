@@ -1,11 +1,11 @@
-<ion-header>
+<ion-header *ngIf="onBoard">
     <ion-toolbar mode="ios" class="headerTool">
         <ion-title>
             Balance
         </ion-title>
     </ion-toolbar>
 </ion-header>
-<ion-content class="backgroundImage">
+<ion-content class="backgroundImage" *ngIf="onBoard">
     <div (click)="singleItem('text','text')" class="divImage">
         <img src="assets/images/1 ABOUT.png" alt="">
     </div>
@@ -20,6 +20,55 @@
     <div (click)="singleItem('music','Psychowalkman-MEDITACE.mp3')" class="divImage">
         <img src="assets/images/MEDITACE.png" alt="">
     </div>
+</ion-content>
+<ion-content class="sliderContent" *ngIf="!onBoard">
+    <ion-slides pager="true">
 
+        <ion-slide>
+            <div class="slideLogo">
+                <img src="assets/images/icon.png">
+            </div>
+            <div class="slideContent">
+                <p>
+                    Balance Mind Machine is an application dedicated to targeted work with wavelengths and their effect on organisms.
+                </p>
+            </div>
+        </ion-slide>
 
+        <ion-slide>
+            <div class="slideLogo">
+                <img src="assets/images/icon.png">
+            </div>
+            <div class="slideContent">
+                <p>
+                    We provide Monthly as well as Yearly Subscriptions to use the app and a special price for Balance users.
+                </p>
+            </div>
+        </ion-slide>
+
+        <ion-slide>
+            <div class="slideLogo">
+                <img src="assets/images/icon.png">
+            </div>
+            <div class="slideContent">
+                <p>
+                    Price for Monthly Subscription is USD 1.99, Yearly Subscription is USD 19 and Balance App Users is USD .99
+                </p>
+            </div>
+        </ion-slide>
+
+        <ion-slide>
+            <div class="slideLogo">
+                <img src="assets/images/icon.png">
+            </div>
+            <div class="slideContent">
+                <p>
+                    Improve your concentration and rest better with Mind Machine App.
+                </p>
+            </div>
+            <div class="continueBtn">
+                <ion-button (click)="startApp()">Continue</ion-button>
+            </div>
+        </ion-slide>
+    </ion-slides>
 </ion-content>

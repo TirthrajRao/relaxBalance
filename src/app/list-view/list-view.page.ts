@@ -27,7 +27,8 @@ export class ListViewPage implements OnInit {
     public platform: Platform,
   ) { }
 
-  ionViewDidEnter() {
+  ionViewWillEnter() {
+    this.onBoard = localStorage.getItem('onBoard');
   }
 
   ngOnInit() {

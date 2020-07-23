@@ -84,14 +84,20 @@ export class AlertPopoverComponent implements OnInit {
       this.iap2.order(productId).then((p) => {
         this.iap2.when(productId).owned((product: IAPProduct) => {
           console.log(` owned ${product.owned}`);
+          alert('Purchase Successfull!')
           console.log(p);
           product.finish();
+          localStorage.setItem('purchased','true');
+          this.popover.dismiss();
         });
         // alert('Purchase Succesful' + JSON.stringify(p));
       }).catch((e) => {
+        // this.popover.dismiss();
         alert('Error Ordering From Store' + e);
       });
     } catch (err) {
+      // this.popover.dismiss();
+      alert('Purchase not Successfull!')
       console.log('Error Ordering ' + JSON.stringify(err));
     }
   }

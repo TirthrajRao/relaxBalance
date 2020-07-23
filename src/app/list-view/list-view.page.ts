@@ -85,11 +85,11 @@ export class ListViewPage implements OnInit {
     let start = moment(localStorage.getItem('trialStart'));
     let end = moment();
     let noOfDaysTrial = end.diff(start, 'days');
-    if (noOfDaysTrial > 14) {
-      this.checkForEndPeriodTrial();
-    } else {
-      this.router.navigateByUrl('/inner-page/' + type + '/' + item);
-    }
+    // if (noOfDaysTrial > 14) {
+    // this.checkForEndPeriodTrial();
+    // } else {
+    this.router.navigateByUrl('/inner-page/' + type + '/' + item);
+    // }
   }
 
   async checkForEndPeriodTrial() {
@@ -97,42 +97,45 @@ export class ListViewPage implements OnInit {
     let end = moment();
     let noOfDaysTrial = end.diff(start, 'days');
     console.log(noOfDaysTrial)
+    let isPurchased = localStorage.getItem('purchased');
     let text;
     // text = 'Dear Mind Machine user, we are very happy to be able to help you for 14 days. Please consider subscribing to one of our plans to maintain full content and access to new features.'
     text = 'Dear Mind Machine user, please consider subscribing to one of our plans to maintain full content and access to new features.'
     // if (noOfDaysTrial > 14) {
-    const popoverTrialEnd = await this.popoverController.create({
-      componentProps: {
-        'type': 'subscribeConfirm',
-        'text': text
-      },
-      component: AlertPopoverComponent,
-      cssClass: 'my-custom-class',
-      translucent: true,
-      backdropDismiss: false
-    });
-    await popoverTrialEnd.present();
+    if (!localStorage.getItem('purchased')) {
+      const popoverTrialEnd = await this.popoverController.create({
+        componentProps: {
+          'type': 'subscribeConfirm',
+          'text': text
+        },
+        component: AlertPopoverComponent,
+        cssClass: 'my-custom-class',
+        translucent: true,
+        backdropDismiss: false
+      });
+      await popoverTrialEnd.present();
 
-    popoverTrialEnd.onDidDismiss().then(async (res: any) => {
-      if (res.data == 'true') {
-        const popoverSubscribe = await this.popoverController.create({
-          componentProps: {
-            'type': 'subscriptionType'
-          },
-          component: AlertPopoverComponent,
-          cssClass: 'my-custom-class',
-          translucent: true,
-          backdropDismiss: false
-        });
-        await popoverSubscribe.present();
-        popoverSubscribe.onDidDismiss().then(async (res: any) => {
-          if (!localStorage.getItem('firstDismiss')) {
-            localStorage.setItem('firstDismiss', 'true')
-          }
-        })
-      }
-      localStorage.setItem('firstDismiss', 'true')
-    })
+      popoverTrialEnd.onDidDismiss().then(async (res: any) => {
+        if (res.data == 'true') {
+          const popoverSubscribe = await this.popoverController.create({
+            componentProps: {
+              'type': 'subscriptionType'
+            },
+            component: AlertPopoverComponent,
+            cssClass: 'my-custom-class',
+            translucent: true,
+            backdropDismiss: false
+          });
+          await popoverSubscribe.present();
+          popoverSubscribe.onDidDismiss().then(async (res: any) => {
+            if (!localStorage.getItem('firstDismiss')) {
+              localStorage.setItem('firstDismiss', 'true')
+            }
+          })
+        }
+        localStorage.setItem('firstDismiss', 'true')
+      })
+    }
     // }
   }
 

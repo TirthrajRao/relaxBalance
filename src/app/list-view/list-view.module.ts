@@ -7,12 +7,14 @@ import { IonicModule } from '@ionic/angular';
 import { ListViewPageRoutingModule } from './list-view-routing.module';
 
 import { ListViewPage } from './list-view.page';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
+    TranslateModule,
     ListViewPageRoutingModule
   ],
   declarations: [ListViewPage]

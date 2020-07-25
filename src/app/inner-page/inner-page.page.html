@@ -1,7 +1,7 @@
 <ion-header>
     <ion-toolbar mode="ios" class="headerTool">
         <ion-title>
-            Balance
+            {{ 'title' | translate }}
         </ion-title>
         <ion-back-button defaultHref="list-view" mode="md" slot="start"></ion-back-button>
     </ion-toolbar>
@@ -13,8 +13,7 @@
         </ion-col>
         <ion-col size="12">
             <p class="timePlayed">{{totalTimePlayed}}</p>
-            <p class="totalDuration">{{ duration }}
-            </p>
+            <p class="totalDuration">{{ duration }}</p>
         </ion-col>
         <ion-col size="12" class="ion-text-center">
             <ion-button fill="clear" (click)="move('backward',progress)">
@@ -40,48 +39,39 @@
     <ion-row>
         <ion-col size="12">
             <p>
-                Dear user of the “Mind Machine”,
+                {{'text.text1' | translate}}
             </p>
             <p>
-                Welcome to the application dedicated to targeted work with wavelengths and their effect on organisms. Surely you want to try this function, so let's get to the bare minimum of the theory:
+                {{'text.text2' | translate}}
             </p>
             <p>
-                Our brain works at frequencies that can be adjusted to some extent by external stimulation; whether sound or light. The goal of our program is to gently and gradually adjust this frequency to a level that supports the activation of thinking, rest, relaxation
-                and quality sleep.
+                {{'text.text3' | translate}}
             </p>
             <p>
-                At the moment, we offer three basic settings and they are “Improving Learning”, “Sleeping Better” and “Deep Meditation”. All are available regardless of the data connection of your phone or tablet, and they can also be used in flight mode. Additional
-                settings will be added in the next version of the application.
+                {{'text.text4' | translate}}
             </p>
             <p>
-                Unlike traditional psychowalkmans, the Balance Mind Machine only works with sound rather than light. This is due to the installation in your mobile phone. According to scientific research, sound significantly affects the functioning of our brain and therefore
-                the impact on both hemispheres will be noticeable even without visual stimuli. Try our audio Mind Machine and you will notice a stronger effect in a short time. We recommend starting with our least demanding program, “Improving Learning”,
-                which also acts as a stimulus set of frequencies that can be used anywhere without any worries.
+                {{'text.text5' | translate}}
             </p>
             <p>
-                The length of this program is 15 minutes, it is the shortest of all and it takes place on the border of the Theta and Alpha levels, which is the target frequency of 9-10 Hz. Listen to the so-called isochronous tones and after a while, you should stop
-                perceiving the sound and your brain will gradually “reprogram”. If you have already tried this program and it was a good experience, you can move on to the other two that are focused on intense calming. Both “Sleep Better” and “Deep Meditation”
-                are 25-minute therapies with a target frequency at Delta and Theta levels of 3-7 Hz and Schumann Resonance, and 7-8 Hz, respectively.
+                {{'text.text6' | translate}}
             </p>
             <p>
-                To use them, we recommend being in an environment where deeper meditation of your brain cannot endanger anyone and where your maximum attention is not needed. Therefore, we do not recommend driving, or doing it at work or in any situation where it is
-                necessary to react quickly to the surrounding events. On the contrary, they are suitable for falling asleep and deep meditation.
+                {{'text.text7' | translate}}
             </p>
             <p>
-                We recommend repeating this therapy regularly. To use the Balance Mind Machine function, you must always have headphones on. The principle of generating frequencies below the audible band works at different frequencies for each ear, the difference of
-                which is the target frequency for your brain. For this reason, Balance Mind Machine unfortunately cannot work without headphones.
+                {{'text.text8' | translate}}
             </p>
             <p>
-                Thank you for your understanding.
+                {{'text.text9' | translate}}
             </p>
             <p>
-                Yours respectfully, Balance Mind Machine
+                {{'text.text10' | translate}}
             </p>
-
 
             <br>
             <br>
-            <img src="./assets/images/how-binaural-beats-work.jpeg" alt="">
+            <img src="./assets/images/{{language}}/how-binaural-beats-work.jpeg" alt="">
         </ion-col>
     </ion-row>
 </ion-content>

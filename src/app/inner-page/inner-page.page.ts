@@ -21,6 +21,7 @@ export class InnerPagePage implements OnInit {
   @ViewChild('range', { static: false }) range: IonRange;
   progress = 0;
   duration: any = "00:00";
+  language: string;
   constructor(
     public loadingController: LoadingController,
     private route: ActivatedRoute,
@@ -34,9 +35,9 @@ export class InnerPagePage implements OnInit {
       this.player.stop();
     }
   }
-
+  
   ionViewWillEnter() {
-
+    this.language = localStorage.getItem('language');
   }
   ngOnInit() {
   }

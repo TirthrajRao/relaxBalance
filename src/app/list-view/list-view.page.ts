@@ -7,7 +7,9 @@ import { PopoverController } from '@ionic/angular';
 import { AlertPopoverComponent } from '../alert-popover/alert-popover.component';
 import { Market } from '@ionic-native/market/ngx';
 import { Router } from '@angular/router';
-import { noop } from '@angular/compiler/src/render3/view/util';
+import { AlertController } from '@ionic/angular';
+import { TranslateService } from '@ngx-translate/core';
+
 
 @Component({
   selector: 'app-list-view',
@@ -18,17 +20,24 @@ export class ListViewPage implements OnInit {
   momentjs: any = moment;
   backButtonSubscription: any;
   onBoard: string;
+  language: any;
 
   constructor(
+    private translateService: TranslateService,
     private router: Router,
     private market: Market,
     public popoverController: PopoverController,
     private fcm: FCM,
     public platform: Platform,
+    public alertController: AlertController
   ) { }
 
   ionViewWillEnter() {
     this.onBoard = localStorage.getItem('onBoard');
+    this.language = localStorage.getItem('language');
+    if (!localStorage.getItem('language')) {
+      this.selectLanguage();
+    }
   }
 
   ngOnInit() {
@@ -38,8 +47,45 @@ export class ListViewPage implements OnInit {
       this.setTrialStartDate();
       // this.userTrialInfoFirstTime();
       this.checkForRating();
-
     }
+  }
+
+  async selectLanguage() {
+    const alert = await this.alertController.create({
+      cssClass: 'my-custom-class',
+      header: 'Select language',
+      inputs: [
+        {
+          name: 'radio1',
+          type: 'radio',
+          label: 'English',
+          value: 'en',
+          checked: true
+        },
+        {
+          name: 'radio2',
+          type: 'radio',
+          label: 'German',
+          value: 'ger'
+        }
+      ],
+      buttons: [
+        {
+          text: 'Okay',
+          handler: (e) => {
+            console.log("EVENT",e)
+            localStorage.setItem('language',e);
+            this.language = localStorage.getItem('language');
+            this.translateService.use(this.language);
+            alert.dismiss();
+            return false
+          }
+        }
+      ],
+      backdropDismiss: false
+    });
+
+    await alert.present();
   }
 
   setTrialStartDate() {
@@ -99,8 +145,6 @@ export class ListViewPage implements OnInit {
     console.log(noOfDaysTrial)
     let isPurchased = localStorage.getItem('purchased');
     let text;
-    // text = 'Dear Mind Machine user, we are very happy to be able to help you for 14 days. Please consider subscribing to one of our plans to maintain full content and access to new features.'
-    text = 'Dear Mind Machine user, please consider subscribing to one of our plans to maintain full content and access to new features.'
     // if (noOfDaysTrial > 14) {
     if (!localStorage.getItem('purchased')) {
       const popoverTrialEnd = await this.popoverController.create({

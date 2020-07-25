@@ -1,0 +1,44 @@
+{
+    "title": "Psychowalkman",
+    "text": {
+        "text1": "Werte Psychowalkman-Userin, werter Psychowalkman-User.",
+        "text2": "Willkommen in der App, die einer gezielten Arbeit mit Schalfrequenzen und ihrem Einfluss auf den menschlichen Organismus gewidmet ist. Sie wollen bestimmt vor allem die App ausprobieren und daher kommen wir gleich zu dem Minimum an notwendigerTheorie.",
+        "text3": "Unser Gehirn arbeitet in Frequenzen, die sich zu einem gewissen Ausmaß von äußeren Stimulationen - durch Klang oder durch Licht - korrigieren lassen. Das Ziel unseres Programms ist es, anhand von wissenschaftlichen Untersuchungen, die Frequenzen sanft in den Bereichen zu modifizieren, die kognitive Leistungssteigerung, aber auch Entspannung, mentale Ruhe und einen guten, erholsamen Schlaf ermöglichen.",
+        "text4": "Zurzeit bieten wir Ihnen 3 Grundeinstellungen, 'Leistungssteigerung beim Lernen', 'Erholsamer Schlaf', und “Tiefe Meditation”.",
+        "text5": "Im Gegensatz zu klassischen Psychowalkmans, arbeitet Balance ausschließlich mit Klang. Nach wissenschaftlichen Forschungen beeinflusst Klang das Funktionieren unseres Gehirns sehr stark und der Einfluss auf beide Hemisphären des Gehirns kann effektiv gewährleistet werden.",
+        "text6": "Wir empfehlen, dass Sie mit dem einfachsten Programm 'Leistungssteigerung beim Lernen' beginnen. Die Frequenzen in diesem Programm wirken stimulierend und Sie können sie überall anwenden. Dieses ist das kürzeste Programm und dauert 15 Minuten. Es spielt sich an der Grenze von Theta und Alfa, die Zielfrequenz ist daher 9 - 10Hz. Hören Sie den isochronen Tönen zu. Nach einer Weile sollten Sie aufhören den Klang bewusst wahrzunehmen und Ihr Gehirn beginnt sich zu reorganisieren.",
+        "text7": "Wenn Sie bereits dieses Programm ausprobiert und es als angenehm empfunden haben, können Sie zu den nächsten zwei wechseln. Diese sind auf eine intensive Entspannung fokussiert . Sowohl der 'erholsamer Schlaf' als auch die 'tiefe Meditation' sind 25 minütige Therapien mit Zielfrequenzen Delta und Theta, 3-7Hz, beziehungsweise in der Schumann-Resonanz, 7-8Hz.",
+        "text8": "Für ihre Anwendung empfehlen wir, dass Sie in einer Umgebung sind, in der ihre tiefe Meditation niemanden gefährden kann und wo Ihre Aufmerksamkeit nicht nach außen gerichtet sein muss. Daher empfehlen wir Ihnen, dieses Programm nicht anzuwenden: während des Autofahrens, während der Arbeit sowie überall dort, wo es notwendig ist schnell auf die Außenwelt zu reagieren. Anderseits eignen sich diese zwei Programme hervorragend für gutes Einschlafen und für eine tiefe Meditation. Wir empfehlen Ihnen diese Therapie regelmäßig zu wiederholen. Um den Psychowalkman zu nützen, ist es notwendig immer Kopfhörer zu verwenden. Das Prinzip des Generierens von Frequenzen unterhalb des hörbaren Bereiches funktioniert mit unterschiedlichen Frequenzen für jedes Ohr, deren Differenz in Ihrem Gehirn die Zielfrequenz kreiert. Aus diesem Grund kann Psychowalkman ohne Kopfhörer nicht funktionieren. Wir danken Ihnen für Ihr Verständnis. Nutzen Sie die aktuellen Ergebnisse wissenschaftlicher Forschung von vielen Fachmenschen, um sowohl Ihre kognitive Leistung zu steigern als auch die Phasen zu optimieren, in welchen Sie eine tiefe Erholung brauchen. Direkt in Ihrem Handy. 14 Tage gratis zum ausprobieren ohne Bindung.",
+        "text9": "Ihr Psychowalkman",
+        "text10": "balanceapp@balanceapp.org"
+    },
+    "subscriptionType": {
+        "heading": "Vielen Dank für Ihr Vertrauen. Um den Zugang zur vollen Version und Neuigkeiten zu gewährleisten, bieten wir Ihnen folgende Abos an:",
+        "product1": "1.99.Euro pro Monat",
+        "product2": "19 Euro pro Jahr",
+        "product3": ".99 Euro pro Monat für Balance Abonnenten",
+        "restore": "Erneuern",
+        "ignore": "Ein anderes Mal"
+    },
+    "trialInfo": {
+        "text1": "Vielen Dank. Willkommen in der Psychowalkman App.",
+        "text2": "Sie haben nun 14 Tage, die App gratis und ohne Einschränkungen immer und überall ohne Datenverbindung zu nutzen.",
+        "text3": "Danach bieten wir Ihnen die Möglichkeit eines Abos, um den Zugang zum ganzen Inhalt sowie zu den Neuigkeiten zu gewährleisten.",
+        "button": "Ich bin einverstanden."
+    },
+    "rating": {
+        "text1": "Bitte bewerten Sie diese App, danke….",
+        "button1": "Später",
+        "button2": "Danke"
+    },
+    "subscribeConfirm": {
+        "text1": "Wir freuen uns sehr, dass wir Ihnen schon seit 14 Tagen helfen können. Bitte erwägen Sie nun, ob Sie Ihre Gesundheit und unsere Arbeit mit einem Abo  unterstützen wollen. Im Rahmen eines Abos können Sie den Psychowalkman weiterhin nützen und Sie erhalten auch den Zugang zu allen Neuigkeiten.",
+        "button1": "Ich möchte mehr erfahren",
+        "button2": "Ich überlege noch"
+    },
+    "trialPeriodToast": "Ihre Probezeit ist vorbei!",
+    "incorrectPassToast": "zadejte správné heslo",
+    "passPlaceholder": "Bitte, fügen Sie hier Ihr Passwort ein",
+    "buttonCancel": "Stornieren",
+    "buttonIAgree": "einreichen"
+}

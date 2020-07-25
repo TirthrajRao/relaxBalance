@@ -1,3 +1,4 @@
+import { TranslateService } from '@ngx-translate/core';
 import { Component, OnInit } from '@angular/core';
 import { InAppPurchase2, IAPProduct } from '@ionic-native/in-app-purchase-2/ngx';
 import { Platform, NavParams } from '@ionic/angular';
@@ -23,14 +24,17 @@ export class AlertPopoverComponent implements OnInit {
   ]
   modalType: any;
   text: any;
+  passPlaceholder: any;
+  buttonCancel: any;
+  buttonIAgree: any;
   constructor(
     public toastController: ToastController,
     public alertController: AlertController,
     public popover: PopoverController,
     public platform: Platform,
     private iap2: InAppPurchase2,
-    private navParams: NavParams
-
+    private navParams: NavParams,
+    private translate: TranslateService
   ) { }
 
   ngOnInit() {
@@ -103,11 +107,13 @@ export class AlertPopoverComponent implements OnInit {
   }
 
   async cancel() {
-    const toast = await this.toastController.create({
-      message: 'Your trial period is over!',
-      duration: 2000
-    });
-    toast.present();
+    this.translate.get("trialPeriodToast").subscribe(async (mes:any)=>{
+      const toast = await this.toastController.create({
+        message: mes,
+        duration: 2000
+      });
+      toast.present();
+    })
     this.popover.dismiss();
   }
 
@@ -120,33 +126,39 @@ export class AlertPopoverComponent implements OnInit {
   }
 
   async discountedCheckout(productId) {
+    this.translate.get(["passPlaceholder","buttonCancel","buttonIAgree"]).subscribe(async (mes:any)=>{
+      this.passPlaceholder = mes.passPlaceholder;
+      this.buttonCancel = mes.buttonCancel;
+      this.buttonIAgree = mes.buttonIAgree;
+    })
     const alert = await this.alertController.create({
       inputs: [
         {
           name: 'discountCode',
           type: 'password',
-          placeholder: 'Please enter a password here'
+          placeholder: this.passPlaceholder
         }],
       buttons: [
         {
-          text: 'Cancel',
+          text: this.buttonCancel,
           role: 'cancel',
           cssClass: 'secondary',
           handler: () => {
             console.log('Confirm Cancel');
           }
         }, {
-          text: 'I agree',
+          text: this.buttonIAgree,
           handler: async (alertData) => {
             if(alertData.discountCode == 'BALANCE'){
               this.checkout(productId);
             }else{
-              const toast = await this.toastController.create({
-                message: 'Please enter the correct password',
-                position: 'bottom',
-                duration: 3000
-              });
-              toast.present();
+              this.translate.get("incorrectPassToast").subscribe(async (mes:any)=>{
+                const toast = await this.toastController.create({
+                  message: mes,
+                  duration: 2000
+                });
+                toast.present();
+              })
             }     
           }
         }

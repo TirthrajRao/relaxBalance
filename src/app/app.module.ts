@@ -13,11 +13,30 @@ import { InAppPurchase2 } from '@ionic-native/in-app-purchase-2/ngx';
 import { CommonModule } from '@angular/common';
 import {AlertPopoverComponent} from './alert-popover/alert-popover.component'
 import { Market } from '@ionic-native/market/ngx';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
+export function createTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
 @NgModule({
   declarations: [AppComponent,AlertPopoverComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,CommonModule],
+  imports: [
+    BrowserModule,
+    IonicModule.forRoot(),
+    AppRoutingModule,
+    CommonModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: { 
+        provide: TranslateLoader,
+        useFactory: (createTranslateLoader), 
+        deps: [HttpClient]
+      }
+    })
+  ],
   providers: [
     StatusBar,
     SplashScreen,

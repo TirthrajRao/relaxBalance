@@ -7,12 +7,14 @@ import { IonicModule } from '@ionic/angular';
 import { InnerPagePageRoutingModule } from './inner-page-routing.module';
 
 import { InnerPagePage } from './inner-page.page';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
+    TranslateModule,
     InnerPagePageRoutingModule
   ],
   declarations: [InnerPagePage]

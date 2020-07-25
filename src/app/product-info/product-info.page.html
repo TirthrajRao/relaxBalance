@@ -1,0 +1,30 @@
+<ion-header>
+    <ion-toolbar mode="ios" class="headerTool">
+        <ion-title>
+            {{ 'title' | translate }}
+        </ion-title>
+        <ion-back-button defaultHref="list-view" mode="md" slot="start"></ion-back-button>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="backgroundImage ion-padding">
+
+    <ion-card class="productCard">
+        <h4>{{'productTitles.monthly' | translate}}</h4>
+        <div class="details">
+            <p>{{'subscriptionType.product1' | translate}}</p>
+        </div>
+    </ion-card>
+    <ion-card class="productCard">
+        <h4>{{'productTitles.yearly' | translate}}</h4>
+        <div class="details">
+            <p>{{'subscriptionType.product2' | translate}}</p>
+        </div>
+    </ion-card>
+    <ion-card class="productCard">
+        <h4>{{'productTitles.special' | translate}}</h4>
+        <div class="details">
+            <p>{{'subscriptionType.product3' | translate}}</p>
+        </div>
+    </ion-card>
+</ion-content>

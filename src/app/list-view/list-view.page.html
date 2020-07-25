@@ -1,11 +1,12 @@
-<ion-header *ngIf="onBoard">
+<ion-header>
     <ion-toolbar mode="ios" class="headerTool">
         <ion-title>
             {{ 'title' | translate }}
         </ion-title>
+        <ion-icon name="information-circle-outline" slot="end" routerLink="/product-info"></ion-icon>
     </ion-toolbar>
 </ion-header>
-<ion-content class="backgroundImage" *ngIf="onBoard && language">
+<ion-content class="backgroundImage" *ngIf="language">
     <div (click)="singleItem('text','text')" class="divImage">
         <img src="assets/images/{{language}}/1 ABOUT.png" alt="">
     </div>
@@ -21,7 +22,7 @@
         <img src="assets/images/{{language}}/MEDITACE.png" alt="">
     </div>
 </ion-content>
-<ion-content class="sliderContent" *ngIf="!onBoard && language">
+<!-- <ion-content class="sliderContent" *ngIf="!onBoard && language">
     <ion-slides pager="true">
 
         <ion-slide>
@@ -71,4 +72,4 @@
             </div>
         </ion-slide>
     </ion-slides>
-</ion-content>
+</ion-content> -->

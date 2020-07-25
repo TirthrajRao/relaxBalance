@@ -40,5 +40,10 @@
     "incorrectPassToast": "Please enter the correct password",
     "passPlaceholder": "Please enter a password here",
     "buttonCancel": "Cancel",
-    "buttonIAgree": "I agree"
+    "buttonIAgree": "I agree",
+    "productTitles": {
+        "monthly": "Monthly Plan",
+        "yearly": "Yearly Plan",
+        "special": "Monthly Balance Subscriber"
+    }
 }

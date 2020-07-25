@@ -40,5 +40,10 @@
     "incorrectPassToast": "zadejte správné heslo",
     "passPlaceholder": "Bitte, fügen Sie hier Ihr Passwort ein",
     "buttonCancel": "Stornieren",
-    "buttonIAgree": "einreichen"
+    "buttonIAgree": "einreichen",
+    "productTitles": {
+        "monthly": "Monatlicher Plan",
+        "yearly": "Jahresplan",
+        "special": "Abonnent des monatlichen Kontostands"
+    }
 }

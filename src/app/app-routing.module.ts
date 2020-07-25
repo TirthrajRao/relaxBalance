@@ -15,6 +15,10 @@ const routes: Routes = [
     path: 'inner-page/:type/:name',
     loadChildren: () => import('./inner-page/inner-page.module').then( m => m.InnerPagePageModule)
   },
+  {
+    path: 'product-info',
+    loadChildren: () => import('./product-info/product-info.module').then( m => m.ProductInfoPageModule)
+  },
 ];
 
 @NgModule({

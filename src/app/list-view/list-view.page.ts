@@ -42,7 +42,7 @@ export class ListViewPage implements OnInit {
 
   ngOnInit() {
     this.getFcmToken();
-    if (localStorage.getItem('onBoard')) {
+    if (localStorage.getItem('language')) {
       this.checkForEndPeriodTrial();
       this.setTrialStartDate();
       // this.userTrialInfoFirstTime();
@@ -78,6 +78,8 @@ export class ListViewPage implements OnInit {
             this.language = localStorage.getItem('language');
             this.translateService.use(this.language);
             alert.dismiss();
+            this.ngOnInit();
+
             return false
           }
         }

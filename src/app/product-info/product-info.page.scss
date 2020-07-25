@@ -4,19 +4,23 @@
 }
 
 .backgroundImage {
-    --background: url('../../assets/images/background_1242x2206.jpeg') no-repeat center center / cover;
+    // --background: url('../../assets/images/background_1242x2206.jpeg') no-repeat center center / cover;
 }
 
 .productCard {
     margin-bottom: 34px;
+    border: 1px solid #0aa90a;
+    border-radius: 12px;
 }
 
 .productCard h4 {
-    margin-left: 13px;
-    color: #000;
+    color: #fff;
     font-weight: 600;
     border-bottom: 1px solid #eedede;
-    padding-bottom: 10px;
+    background: #0aa90a;
+    margin: 0;
+    padding: 10px;
+    font-size: 18px;
 }
 
 .details p {

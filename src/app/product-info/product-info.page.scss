@@ -1,0 +1,30 @@
+.headerTool {
+    --background: #0aa90a;
+    color: #fff;
+}
+
+.backgroundImage {
+    // --background: url('../../assets/images/background_1242x2206.jpeg') no-repeat center center / cover;
+}
+
+.productCard {
+    margin-bottom: 34px;
+    border: 1px solid #0aa90a;
+    border-radius: 12px;
+}
+
+.productCard h4 {
+    color: #fff;
+    font-weight: 600;
+    border-bottom: 1px solid #eedede;
+    background: #0aa90a;
+    margin: 0;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.details p {
+    margin: 13px;
+    font-size: 15px;
+    color: #595252;
+}

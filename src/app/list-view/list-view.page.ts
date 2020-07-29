@@ -1,5 +1,5 @@
 import { async } from '@angular/core/testing';
-import { Platform } from '@ionic/angular';
+import { Platform, ToastController } from '@ionic/angular';
 import { Component, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
 import { FCM } from '@ionic-native/fcm/ngx';
 import * as moment from 'moment-timezone';
@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
 import { TranslateService } from '@ngx-translate/core';
 
+declare var $: any;
 
 @Component({
   selector: 'app-list-view',
@@ -21,6 +22,7 @@ export class ListViewPage implements OnInit {
   backButtonSubscription: any;
   onBoard: string;
   language: any;
+  tempLang: any;
 
   constructor(
     private translateService: TranslateService,
@@ -29,28 +31,39 @@ export class ListViewPage implements OnInit {
     public popoverController: PopoverController,
     private fcm: FCM,
     public platform: Platform,
-    public alertController: AlertController
+    public alertController: AlertController,
+    public toastController: ToastController
   ) { }
 
   ionViewWillEnter() {
     this.onBoard = localStorage.getItem('onBoard');
     this.language = localStorage.getItem('language');
     if (!localStorage.getItem('language')) {
-      this.selectLanguage();
+      // this.selectLanguage();
     }
   }
 
   ngOnInit() {
     this.getFcmToken();
     if (localStorage.getItem('language')) {
-      this.checkForEndPeriodTrial();
-      this.setTrialStartDate();
+      // this.checkForEndPeriodTrial();
+      // this.setTrialStartDate();
       // this.userTrialInfoFirstTime();
       this.checkForRating();
     }
   }
 
-  async selectLanguage() {
+  getLang(lang, e) {
+    this.tempLang = lang
+    setTimeout(() => {
+      this.language = lang
+      this.translateService.use(this.language);
+      localStorage.setItem('language',this.language)
+    }, 500);
+    console.log("LANGUAGE", lang)
+  }
+
+  async changeLanguage() {
     const alert = await this.alertController.create({
       cssClass: 'my-custom-class',
       header: 'Select language',
@@ -60,26 +73,45 @@ export class ListViewPage implements OnInit {
           type: 'radio',
           label: 'English',
           value: 'en',
-          checked: true
+          checked: this.language == 'en'
         },
         {
           name: 'radio2',
           type: 'radio',
           label: 'German',
-          value: 'ger'
+          value: 'ger',
+          checked: this.language == 'ger'
+        },
+        {
+          name: 'radio1',
+          type: 'radio',
+          label: 'Chinese',
+          value: 'chi',
+          checked: this.language == 'chi'
+        },
+        {
+          name: 'radio2',
+          type: 'radio',
+          label: 'French',
+          value: 'fre',
+          checked: this.language == 'fre'
+        },
+        {
+          name: 'radio1',
+          type: 'radio',
+          label: 'Korean',
+          value: 'kor',
+          checked: this.language == 'kor'
         }
       ],
       buttons: [
         {
           text: 'Okay',
           handler: (e) => {
-            console.log("EVENT",e)
             localStorage.setItem('language',e);
             this.language = localStorage.getItem('language');
             this.translateService.use(this.language);
             alert.dismiss();
-            this.ngOnInit();
-
             return false
           }
         }
@@ -93,7 +125,6 @@ export class ListViewPage implements OnInit {
   setTrialStartDate() {
     if (!localStorage.getItem('trialStart')) {
       let todaysDate = moment().format();
-      console.log("ff")
       localStorage.setItem('trialStart', todaysDate.toString());
     }
   }
@@ -106,6 +137,7 @@ export class ListViewPage implements OnInit {
     // this.userTrialInfoFirstTime();
     this.checkForRating();
   }
+
 
   getFcmToken() {
     if (!localStorage.getItem('token')) {

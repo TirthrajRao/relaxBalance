@@ -20,34 +20,40 @@
     width: 322230px;
 }
 
-ion-slide div {
-    width: auto !important;
-}
-
-ion-slide {
-    height: 100vh;
-}
-
-.slideLogo img {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    margin: auto;
-    bottom: 40%;
-}
-
-.slideContent p {
-    font-weight: 600;
-    margin: 0px 4%;
-}
-
-.continueBtn {
-    position: absolute;
-    bottom: 10vh;
-}
-
 ion-toolbar ion-icon {
     font-size: 25px;
     padding-right: 8px;
+}
+
+.logo {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+}
+
+ion-card.langCard {
+    padding: 20px;
+    box-shadow: none;
+    border: 1px solid #ebebeb;
+    text-align: center;
+}
+
+.storeLang {
+    text-align: center;
+}
+
+.storeLang ion-button {
+    width: 79%;
+    margin: 4% 10%;
+    --background: #25a925;
+}
+
+.addBackground {
+    background-color: #25a925;
+    color: #fff;
+    font-weight: 600;
 }

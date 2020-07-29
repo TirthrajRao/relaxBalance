@@ -1,0 +1,49 @@
+{
+    "title": "Psychowalkman",
+    "text": {
+        "text1": "Cher usager, cher utilisateur de Psychowalkman, Bienvenue dans l’application dédiée au travail ciblé sur les longueurs d’onde et leur effet sur l’organisme. Vous voulez sûrement essayer cette fonctionnalité, passons donc directement à la théorie fondamentalenécessaire :",
+        "text2": "Notre cerveau fonctionne à des fréquences pouvant être ajustées dans une certaine mesure par une stimulation externe. Il s’agit du son ou de la lumière. Notre programme vise à progressivement affiner cette fréquence sur une zone qui favorise l’activation de la pensée, mais aussi le repos, la relaxation et le sommeil de qualité.",
+        "text3": "Nous proposons pour le moment trois réglages de base, « Amélioration de l’apprentissage », « Sommeil de qualité » et « Méditation profonde ». Ils sont tous disponibles, sans avoir à tenir compte de la connexion aux données de votre téléphone ou tablette. Le dispositif peut également être utilisé en mode Vol. Détendez-vous à tout moment, n’importe où. Des paramètres supplémentaires seront ajoutés dans la prochaine version de l’application.",
+        "text4": "Contrairement aux Psychowalkmans traditionnels, Balance ne fonctionne qu’avec le son, pas la lumière. Cela est dû à l’installation sur votre téléphone portable. Conformément aux recherches scientifiques, le son influence de manière très prononcée le fonctionnement de notre cerveau, les deux hémisphères du cerveau étant impactés de manière perceptible même sans stimulus visuel. Il sera simplement moins encombrant que les équipements audiovisuels. Essayez notre Psychowalkman audio et, si cela vous aide et si vous ressentez en même temps un effet plus puissant, essayez le dispositif AVS (audio et vidéo).",
+        "text5": "Nous vous recommandons de démarrer avec notre programme « Amélioration de l’apprentissage », le plus simple, qui utilise un ensemble de fréquences stimulantes, que vous pouvez utiliser sans crainte n’importe où. Ce programme prend 15 minutes, la durée plus courte de toutes, et utilise les fréquences cibles de 9-10 Hz, à la frontière des niveaux Thêta et Alpha. Écoutez les tonalités dites isochrones. Au bout d’un certain temps, vous ne percevrez plus le son et votre cerveau se « reprogrammera » progressivement.",
+        "text6": "Si vous avez déjà essayé ce programme et s’il vous a plu, vous pouvez passer aux deux autres, ciblés sur un intense apaisement. Les programmes « Sommeil de qualité » et « Méditation profonde » sont des thérapies de 25 minutes utilisant la fréquence cible des résonances de Schumann, Delta et Thêta, respectivement de 3-7 Hz et 7-8 Hz.",
+        "text7": "Nous vous recommandons à cette fin de vous placer dans un environnement où une méditation cérébrale plus profonde ne peut mettre quiconque en danger et où votre attention maximale n’est pas requise. Nous ne les recommandons par conséquent pas pendant la conduite, le travail et dans les cas où il est nécessaire de rapidement réagir aux événements environnants. Ils sont au contraire très adaptés à l’endormissement et à la méditation profonde.",
+        "text8": "Nous recommandons de renouveler régulièrement ce traitement.Pour utiliser les fonctions Psychowalkman, vous devez toujours avoir un casque. Le principe de la génération de fréquences inférieures à la zone audible fonctionne à des fréquences différentes pour chaque oreille, la différence générant la fréquence cible pour votre cerveau. Psychowalkman ne peut malheureusement pas de ce fait fonctionner sans casque. Merci de votre compréhension.",
+        "text9": "Cordialement,",
+        "text10": "Psychowalkman"
+    },
+    "subscriptionType": {
+        "heading": "Merci de votre confiance. Pour accéder à la version complète et aux nouveautés, nous vous proposons les formes d’abonnement suivantes :",
+        "product1": "1,99 Euro par mois",
+        "product2": "19 Euros par an",
+        "product3": ".99 Euro Abonné mensuel Balance",
+        "restore": "Rafraîchir",
+        "ignore": "Peut-être la prochaine fois"
+    },
+    "trialInfo": {
+        "text1": "Je vous remercie. Bienvenue dans l’application Psychowalkman.",
+        "text2": "Vous pouvez désormais l’utiliser gratuitement et sans restriction pendant 14 jours. À tout moment et n’importe où avoir besoin d’être connecté.",
+        "text3": "Nous vous proposerons ensuite la possibilité de profiter d’un abonnement pour conserver l’intégralité du contenu et l’accès aux nouveautés.",
+        "button": "J’approuve"
+    },
+    "rating": {
+        "text1": "Veuillez évaluer notre application. Je vous remercie…",
+        "button1": "Plus tard",
+        "button2": "Je vous remercie"
+    },
+    "subscribeConfirm": {
+        "text1": "Cher usager, utilisateur de l’application Psychowalkman. Nous sommes très heureux de pouvoir vous aider pendant 14 jours. Merci de soutenir votre santé et notre travail en vous abonnant. Vous aurez la possibilité de continuer à utiliser Psychowalkman et d’accéder aux nouveautés. ",
+        "button1": "Pour de plus amples informations",
+        "button2": "Je vais encore réfléchir"
+    },
+    "trialPeriodToast": "Votre période d'essai est terminée!",
+    "incorrectPassToast": "Veuillez saisir le mot de passe correct",
+    "passPlaceholder": "Veuillez saisir le mot de passe ici  ",
+    "buttonCancel": "Annuler",
+    "buttonIAgree": "je suis d'accord",
+    "productTitles": {
+        "monthly": "Plan mensuel",
+        "yearly": "Plan annuel",
+        "special": "Abonné au solde mensuel"
+    }
+}

@@ -82,32 +82,26 @@ export class AlertPopoverComponent implements OnInit {
 
   checkout(productId) {
     // this.registerHandlersForPurchase(productId);
-    try {
-      let product = this.iap2.get(productId);
-      console.log('Product Info: ', product);
-      this.iap2.order(productId).then((p) => {
-        this.iap2.when(productId).owned((product: IAPProduct) => {
-          console.log(` owned ${product.owned}`);
-          alert('Purchase Successfull!')
-          console.log(p);
-          product.finish();
-          localStorage.setItem('purchased','true');
-          this.popover.dismiss();
-        });
-        // alert('Purchase Succesful' + JSON.stringify(p));
-      }).catch((e) => {
-        // this.popover.dismiss();
-        alert('Error Ordering From Store' + e);
+    let product = this.iap2.get(productId);
+    console.log('Product Info: ', product);
+    this.iap2.order(productId).then((p) => {
+      this.iap2.when(productId).owned((product: IAPProduct) => {
+        console.log(` owned ${product.owned}`);
+        alert('Purchase Successfull!')
+        console.log(p);
+        product.finish();
+        localStorage.setItem('purchased', 'true');
+        this.popover.dismiss();
       });
-    } catch (err) {
+      // alert('Purchase Succesful' + JSON.stringify(p));
+    }).catch((e) => {
       // this.popover.dismiss();
-      alert('Purchase not Successfull!')
-      console.log('Error Ordering ' + JSON.stringify(err));
-    }
+      alert('Error Ordering From Store' + e);
+    });
   }
 
   async cancel() {
-    this.translate.get("trialPeriodToast").subscribe(async (mes:any)=>{
+    this.translate.get("trialPeriodToast").subscribe(async (mes: any) => {
       const toast = await this.toastController.create({
         message: mes,
         duration: 2000
@@ -121,12 +115,12 @@ export class AlertPopoverComponent implements OnInit {
     this.popover.dismiss(trialInfo);
   }
 
-  restoreExistingSubsription(){
-    
+  restoreExistingSubsription() {
+
   }
 
   async discountedCheckout(productId) {
-    this.translate.get(["passPlaceholder","buttonCancel","buttonIAgree"]).subscribe(async (mes:any)=>{
+    this.translate.get(["passPlaceholder", "buttonCancel", "buttonIAgree"]).subscribe(async (mes: any) => {
       this.passPlaceholder = mes.passPlaceholder;
       this.buttonCancel = mes.buttonCancel;
       this.buttonIAgree = mes.buttonIAgree;
@@ -149,17 +143,17 @@ export class AlertPopoverComponent implements OnInit {
         }, {
           text: this.buttonIAgree,
           handler: async (alertData) => {
-            if(alertData.discountCode == 'BALANCE'){
+            if (alertData.discountCode == 'BALANCE') {
               this.checkout(productId);
-            }else{
-              this.translate.get("incorrectPassToast").subscribe(async (mes:any)=>{
+            } else {
+              this.translate.get("incorrectPassToast").subscribe(async (mes: any) => {
                 const toast = await this.toastController.create({
                   message: mes,
                   duration: 2000
                 });
                 toast.present();
               })
-            }     
+            }
           }
         }
       ]

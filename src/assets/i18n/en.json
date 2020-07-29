@@ -1,4 +1,14 @@
 {
+    "card": {
+        "card1": "",
+        "card2": "IMPROVING LEARNING",
+        "card3": "BETTER SLEEP",
+        "card4": "DEEP MEDITATION"
+    },
+    "inner": {
+        "text1": "How binary rhythms work",
+        "text2": "The resulting frequency 5HZ"
+    },
     "title": "Mind Machine",
     "text": {
         "text1": "Dear user of the “Mind Machine”,",
@@ -46,4 +56,5 @@
         "yearly": "Yearly Plan",
         "special": "Monthly Balance Subscriber"
     }
+
 }

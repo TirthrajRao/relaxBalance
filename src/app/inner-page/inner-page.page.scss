@@ -64,3 +64,40 @@ p {
     font-weight: bolder;
     margin-top: -3px;
 }
+
+.mainDiv {
+    position: relative;
+}
+
+.mainDiv .text1 {
+    position: absolute;
+    z-index: 999;
+    color: #fff;
+    left: 0;
+    right: 0;
+    top: -8px;
+    text-align: center;
+    width: 100%;
+    font-family: lowvetica;
+    font-size: 29px;
+    margin: 0;
+    background: #de84de;
+    border-radius: 20px;
+    padding: 7px;
+}
+
+.text2 {
+    position: absolute;
+    z-index: 999;
+    color: red;
+    left: 0;
+    right: 0;
+    bottom: -8px;
+    text-align: center;
+    width: 100%;
+    font-family: lowvetica;
+    font-size: 30px;
+    margin: 0;
+    border-radius: 20px;
+    padding: 7px;
+}

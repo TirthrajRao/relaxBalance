@@ -1,4 +1,14 @@
 {
+    "card": {
+        "card1": "",
+        "card2": "LERNEN VERBESSERN",
+        "card3": "BESSERER SCHLAF",
+        "card4": "TIEFE MEDITATION"
+    },
+    "inner": {
+        "text1": "Wie binäre Rhythmen funktionieren",
+        "text2": "Die resultierende Frequenz 5 Hz"
+    },
     "title": "Psychowalkman",
     "text": {
         "text1": "Werte Psychowalkman-Userin, werter Psychowalkman-User.",

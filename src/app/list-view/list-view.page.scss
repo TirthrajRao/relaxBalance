@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'lowvetica';
+    src: url('../../assets/lowvetica.ttf');
+}
+
 .headerTool {
     --background: #0aa90a;
     color: #fff;
@@ -11,9 +16,28 @@
     margin: 5px 5px 0px 5px;
 }
 
+.divImage {
+    position: relative;
+}
+
 .divImage img {
     width: 100%;
     height: auto;
+}
+
+.divImage .text {
+    position: absolute;
+    z-index: 999;
+    color: #fff;
+    left: 0;
+    right: 0;
+    top: 14%;
+    text-align: center;
+    width: 100%;
+    font-family: lowvetica;
+    font-size: 30px;
+    margin: 0;
+    text-shadow: 2px 2px #5a5757;
 }
 
 .my-custom-class .popover-content {

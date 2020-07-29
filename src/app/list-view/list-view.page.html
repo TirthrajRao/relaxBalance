@@ -12,15 +12,18 @@
         <img src="assets/images/{{language}}/1 ABOUT.png" alt="">
     </div>
     <div (click)="singleItem('music','Psychowalkman-UCENI.mp3')" class="divImage">
-        <img src="assets/images/{{language}}/UCENI.png" alt="">
+        <img src="assets/images/LERNEN.png" alt="">
+        <p class="text">{{'card.card2' | translate}}</p>
     </div>
 
     <div (click)="singleItem('music','Psychowalkman-USINANI.mp3')" class="divImage">
-        <img src="assets/images/{{language}}/SPANEK.png" alt="">
+        <img src="assets/images/ERHOLSAMER SCHLAF.png" alt="">
+        <p class="text">{{'card.card3' | translate}}</p>
     </div>
 
     <div (click)="singleItem('music','Psychowalkman-MEDITACE.mp3')" class="divImage">
-        <img src="assets/images/{{language}}/MEDITACE.png" alt="">
+        <img src="assets/images/TIEFE MEDITATIONpng.png" alt="">
+        <p class="text">{{'card.card4' | translate}}</p>
     </div>
 </ion-content>
 <ion-content class="sliderContent" *ngIf="!language">

@@ -1,4 +1,14 @@
 {
+    "card": {
+        "card1": "",
+        "card2": "AMÉLIRER PRENTISAGE",
+        "card3": "MEILLEUR SOMMEIL",
+        "card4": "MÉDITATION PROFONDE"
+    },
+    "inner": {
+        "text1": "Comment fonctionnent les rythmes binaires",
+        "text2": "La fréquence résultante 5HZ"
+    },
     "title": "Psychowalkman",
     "text": {
         "text1": "Cher usager, cher utilisateur de Psychowalkman, Bienvenue dans l’application dédiée au travail ciblé sur les longueurs d’onde et leur effet sur l’organisme. Vous voulez sûrement essayer cette fonctionnalité, passons donc directement à la théorie fondamentalenécessaire :",

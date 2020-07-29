@@ -1,4 +1,14 @@
 {
+    "card": {
+        "card1": "",
+        "card2": "改善学习",
+        "card3": "睡得更好",
+        "card4": "深度冥想"
+    },
+    "inner": {
+        "text1": "二元节奏如何工作",
+        "text2": "产生的频率5HZ"
+    },
     "title": "改善注意力，休息得更好",
     "text": {
         "text1": "尊敬的 “Psychowalkman” 用户：",

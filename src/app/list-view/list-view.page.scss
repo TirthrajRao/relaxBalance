@@ -27,16 +27,18 @@
 
 .divImage .text {
     position: absolute;
-    z-index: 999;
-    color: #fff;
+    top: 0;
+    bottom: 0;
     left: 0;
     right: 0;
-    top: 14%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     text-align: center;
-    width: 100%;
     font-family: lowvetica;
-    font-size: 30px;
-    margin: 0;
+    font-size: 7vw;
+    color: #fff;
     text-shadow: 2px 2px #5a5757;
 }
 

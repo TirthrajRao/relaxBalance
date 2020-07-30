@@ -53,7 +53,7 @@ export class ListViewPage implements OnInit {
     }
   }
 
-  getLang(lang, e) {
+  getLang(lang, e){
     this.tempLang = lang
     setTimeout(() => {
       this.language = lang

@@ -9,7 +9,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FCM } from '@ionic-native/fcm/ngx';
-import { InAppPurchase2 } from '@ionic-native/in-app-purchase-2/ngx';
+// import { InAppPurchase2 } from '@ionic-native/in-app-purchase-2/ngx';
 import { CommonModule } from '@angular/common';
 import {AlertPopoverComponent} from './alert-popover/alert-popover.component'
 import { Market } from '@ionic-native/market/ngx';
@@ -21,7 +21,7 @@ import { Market } from '@ionic-native/market/ngx';
   providers: [
     StatusBar,
     SplashScreen,
-    InAppPurchase2,
+    // InAppPurchase2,
     Market,
     FCM,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }

@@ -7,14 +7,14 @@ import { IonicModule } from '@ionic/angular';
 import { ProductInfoPageRoutingModule } from './product-info-routing.module';
 
 import { ProductInfoPage } from './product-info.page';
-import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+// import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    TranslateModule,
+    // TranslateModule,
     ProductInfoPageRoutingModule
   ],
   declarations: [ProductInfoPage]

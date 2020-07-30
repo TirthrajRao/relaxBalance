@@ -7,7 +7,6 @@ import { PopoverController } from '@ionic/angular';
 import { AlertPopoverComponent } from '../alert-popover/alert-popover.component';
 import { Market } from '@ionic-native/market/ngx';
 import { Router } from '@angular/router';
-import { noop } from '@angular/compiler/src/render3/view/util';
 
 @Component({
   selector: 'app-list-view',
@@ -34,8 +33,8 @@ export class ListViewPage implements OnInit {
   ngOnInit() {
     this.getFcmToken();
     if (localStorage.getItem('onBoard')) {
-      this.checkForEndPeriodTrial();
-      this.setTrialStartDate();
+      // this.checkForEndPeriodTrial();
+      // this.setTrialStartDate();
       // this.userTrialInfoFirstTime();
       this.checkForRating();
 
@@ -53,7 +52,7 @@ export class ListViewPage implements OnInit {
   startApp() {
     localStorage.setItem('onBoard', 'true');
     this.onBoard = 'true';
-    this.checkForEndPeriodTrial();
+    // this.checkForEndPeriodTrial();
     this.setTrialStartDate();
     // this.userTrialInfoFirstTime();
     this.checkForRating();

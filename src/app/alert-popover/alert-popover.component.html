@@ -5,13 +5,13 @@
                 {{'subscriptionType.heading' | translate}}
             </h6>
         </ion-item>
-        <ion-item (click)="checkout('mindmachine1')">
+        <ion-item (click)="checkout('mindmachine')">
             <p>{{'subscriptionType.product1' | translate}} </p>
         </ion-item>
-        <ion-item (click)="checkout('mindmachine2')">
+        <ion-item (click)="checkout('mindmachineyearly')">
             <p>{{'subscriptionType.product2' | translate}}</p>
         </ion-item>
-        <ion-item (click)="discountedCheckout('mindmachine3')">
+        <ion-item (click)="discountedCheckout('mindmachinebalance')">
             <span>{{'subscriptionType.product3' | translate}}</span>
         </ion-item>
         <ion-item (click)="restoreExistingSubsription()">
@@ -51,7 +51,7 @@
 <ion-content *ngIf="type == 'subscribeConfirm'" class="ion-padding trialInfo">
     <h6>{{'subscribeConfirm.text1' | translate}}</h6>
     <div class="agree">
-        <ion-button (click)="dismiss('true')">{{'subscribeConfirm.button1' | translate}}</ion-button>
+        <ion-button routerLink="/product-info" (click)="dismiss('false')">{{'subscribeConfirm.button1' | translate}}</ion-button>
         <ion-button (click)="dismiss('false')">{{'subscribeConfirm.button2' | translate}}</ion-button>
     </div>
 </ion-content>

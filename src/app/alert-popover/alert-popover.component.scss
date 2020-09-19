@@ -4,12 +4,13 @@ p {
     color: #2c60c8;
 }
 
-ion-item {
-    --background: #edecec
-}
 
 ion-list {
     padding: 0;
+    ion-item {
+        --background: #edecec;
+        text-align: center;
+    }
 }
 
 span {

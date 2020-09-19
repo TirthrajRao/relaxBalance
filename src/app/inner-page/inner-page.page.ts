@@ -28,6 +28,13 @@ export class InnerPagePage implements OnInit {
     public platform: Platform,
   ) {
     this.checkForType();
+    // route.queryParams.subscribe(params => {
+    //   if (params.type === 'music') {
+    //     // this.musicPath = params.name
+    //     this.musicPath = `assets/music/${params.name}`;
+    //     this.start();
+    //   }
+    // })
   }
 
   ionViewWillLeave() {
@@ -35,7 +42,7 @@ export class InnerPagePage implements OnInit {
       this.player.stop();
     }
   }
-  
+
   ionViewWillEnter() {
     this.language = localStorage.getItem('language');
   }
@@ -48,7 +55,7 @@ export class InnerPagePage implements OnInit {
 
     if (this.type == 'music') {
       this.musicPath = this.route.snapshot.params.name
-      this.musicPath = './assets/music/' + this.musicPath;
+      this.musicPath = 'assets/music/' + this.musicPath;
       this.start();
     }
   }

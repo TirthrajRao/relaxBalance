@@ -46,7 +46,7 @@ export class ListViewPage implements OnInit {
   ngOnInit() {
     this.getFcmToken();
     if (localStorage.getItem('language')) {
-      // this.checkForEndPeriodTrial();
+      this.checkForEndPeriodTrial();
       // this.setTrialStartDate();
       // this.userTrialInfoFirstTime();
       this.checkForRating();
@@ -59,6 +59,7 @@ export class ListViewPage implements OnInit {
       this.language = lang
       this.translateService.use(this.language);
       localStorage.setItem('language',this.language)
+      this.startApp();
     }, 500);
     console.log("LANGUAGE", lang)
   }
@@ -180,7 +181,7 @@ export class ListViewPage implements OnInit {
     let isPurchased = localStorage.getItem('purchased');
     let text;
     // if (noOfDaysTrial > 14) {
-    if (!localStorage.getItem('purchased')) {
+    // if (!localStorage.getItem('purchased')) {
       const popoverTrialEnd = await this.popoverController.create({
         componentProps: {
           'type': 'subscribeConfirm',
@@ -213,7 +214,7 @@ export class ListViewPage implements OnInit {
         }
         localStorage.setItem('firstDismiss', 'true')
       })
-    }
+    // }
     // }
   }
 

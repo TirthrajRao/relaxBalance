@@ -24,9 +24,18 @@
     },
     "subscriptionType": {
         "heading": "Thank you for your interest. To access the full version and new features in the future, we offer you the following forms of subscription:",
-        "product1": "USD 1.99 per month",
-        "product2": "USD 19 per year",
+        "product1": "USD 1.49 per month",
+        "product2": "USD 17.49 per year",
         "product3": "USD .99 Monthly Balance Subscriber",
+        "duration1": "1 Month",
+        "duration2": "1 Year",
+        "duration3": "1 Month",
+        "price1": "$ 1.49/Month",
+        "price2": "$ 19/Year",
+        "price3": "$ 0.99/Month",
+        "description1": "This product is for 1.49 USD monthly auto renewal subscription.",
+        "description2": "This product is of 17.49 USD for a yearly subscription.",
+        "description3": "You can have the monthly subscription in 0.99 USD only if you are a subscribed member on our BALANCE application.",
         "restore": "Restore",
         "ignore": "Perhaps next time"
     },
@@ -52,9 +61,9 @@
     "buttonCancel": "Cancel",
     "buttonIAgree": "I agree",
     "productTitles": {
-        "monthly": "Monthly Plan",
-        "yearly": "Yearly Plan",
-        "special": "Monthly Balance Subscriber"
+        "monthly": "Mind Machine 1",
+        "yearly": "Mind Machine 2",
+        "special": "Mind Machine 3"
     }
 
 }

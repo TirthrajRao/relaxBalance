@@ -25,8 +25,17 @@
     "subscriptionType": {
         "heading": "Merci de votre confiance. Pour accéder à la version complète et aux nouveautés, nous vous proposons les formes d’abonnement suivantes :",
         "product1": "1,99 Euro par mois",
-        "product2": "19 Euros par an",
+        "product2": "19.49 Euros par an",
         "product3": ".99 Euro Abonné mensuel Balance",
+        "duration1": "1 mois",
+        "duration2": "1 an",
+        "duration3": "1 mois",
+        "price1": "€ 1.99/mois",
+        "price2": "€ 19.49/an",
+        "price3": "$ 0.99/Month",
+        "description1": "Ce produit est pour un abonnement mensuel de renouvellement automatique de 1,99 EUR.",
+        "description2": "Ce produit est de 19,49 EUR pour un abonnement annuel.",
+        "description3": "You can have the monthly subscription in 0.99 USD only if you are a subscribed member on our BALANCE application.",
         "restore": "Rafraîchir",
         "ignore": "Peut-être la prochaine fois"
     },

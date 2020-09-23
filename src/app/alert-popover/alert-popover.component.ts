@@ -10,7 +10,7 @@ import { ToastController, PopoverController, AlertController } from '@ionic/angu
   styleUrls: ['./alert-popover.component.scss'],
 })
 export class AlertPopoverComponent implements OnInit {
-  product: IAPProduct;
+  // product: IAPProduct;
   productId = [{
     id: 'mindmachine',
     type: this.iap2.PAID_SUBSCRIPTION
@@ -27,6 +27,7 @@ export class AlertPopoverComponent implements OnInit {
   passPlaceholder: any;
   buttonCancel: any;
   buttonIAgree: any;
+  product:any;
   constructor(
     public toastController: ToastController,
     public alertController: AlertController,

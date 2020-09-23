@@ -63,9 +63,7 @@ export class AppComponent {
 
    initializeApp() {
     this.platform.ready().then(async () => {
-      if(localStorage.getItem('language')){
-        this.translate.setDefaultLang(localStorage.getItem('language'));
-      }
+      this.translate.setDefaultLang('en');
       this.statusBar.backgroundColorByHexString('#000000');
       this.splashScreen.hide();
       // await this.iap2.register(this.productId);

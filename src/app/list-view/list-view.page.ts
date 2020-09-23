@@ -133,7 +133,7 @@ export class ListViewPage implements OnInit {
   startApp() {
     localStorage.setItem('onBoard', 'true');
     this.onBoard = 'true';
-    this.checkForEndPeriodTrial();
+    // this.checkForEndPeriodTrial();
     this.setTrialStartDate();
     // this.userTrialInfoFirstTime();
     this.checkForRating();

@@ -46,7 +46,7 @@ export class AlertPopoverComponent implements OnInit {
   
   ionViewDidEnter() {
     this.platform.ready().then(async () => {
-      this.setup();
+      // this.setup();
     });
   }
 

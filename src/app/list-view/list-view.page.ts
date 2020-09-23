@@ -53,12 +53,12 @@ export class ListViewPage implements OnInit {
     }
   }
 
-  getLang(lang, e){
+  getLang(lang, e) {
     this.tempLang = lang
     setTimeout(() => {
       this.language = lang
       this.translateService.use(this.language);
-      localStorage.setItem('language',this.language)
+      localStorage.setItem('language', this.language)
       this.startApp();
     }, 500);
     console.log("LANGUAGE", lang)
@@ -109,7 +109,7 @@ export class ListViewPage implements OnInit {
         {
           text: 'Okay',
           handler: (e) => {
-            localStorage.setItem('language',e);
+            localStorage.setItem('language', e);
             this.language = localStorage.getItem('language');
             this.translateService.use(this.language);
             alert.dismiss();
@@ -166,11 +166,11 @@ export class ListViewPage implements OnInit {
     let start = moment(localStorage.getItem('trialStart'));
     let end = moment();
     let noOfDaysTrial = end.diff(start, 'days');
-    // if (noOfDaysTrial > 14) {
-    // this.checkForEndPeriodTrial();
-    // } else {
-    this.router.navigateByUrl('/inner-page/' + type + '/' + item);
-    // }
+    if (noOfDaysTrial > 14) {
+      this.checkForEndPeriodTrial();
+    } else {
+      this.router.navigateByUrl('/inner-page/' + type + '/' + item);
+    }
   }
 
   async checkForEndPeriodTrial() {
@@ -182,38 +182,38 @@ export class ListViewPage implements OnInit {
     let text;
     // if (noOfDaysTrial > 14) {
     // if (!localStorage.getItem('purchased')) {
-      const popoverTrialEnd = await this.popoverController.create({
-        componentProps: {
-          'type': 'subscribeConfirm',
-          'text': text
-        },
-        component: AlertPopoverComponent,
-        cssClass: 'my-custom-class',
-        translucent: true,
-        backdropDismiss: false
-      });
-      await popoverTrialEnd.present();
+    const popoverTrialEnd = await this.popoverController.create({
+      componentProps: {
+        'type': 'subscribeConfirm',
+        'text': text
+      },
+      component: AlertPopoverComponent,
+      cssClass: 'my-custom-class',
+      translucent: true,
+      backdropDismiss: false
+    });
+    await popoverTrialEnd.present();
 
-      popoverTrialEnd.onDidDismiss().then(async (res: any) => {
-        if (res.data == 'true') {
-          const popoverSubscribe = await this.popoverController.create({
-            componentProps: {
-              'type': 'subscriptionType'
-            },
-            component: AlertPopoverComponent,
-            cssClass: 'my-custom-class',
-            translucent: true,
-            backdropDismiss: false
-          });
-          await popoverSubscribe.present();
-          popoverSubscribe.onDidDismiss().then(async (res: any) => {
-            if (!localStorage.getItem('firstDismiss')) {
-              localStorage.setItem('firstDismiss', 'true')
-            }
-          })
-        }
-        localStorage.setItem('firstDismiss', 'true')
-      })
+    popoverTrialEnd.onDidDismiss().then(async (res: any) => {
+      if (res.data == 'true') {
+        const popoverSubscribe = await this.popoverController.create({
+          componentProps: {
+            'type': 'subscriptionType'
+          },
+          component: AlertPopoverComponent,
+          cssClass: 'my-custom-class',
+          translucent: true,
+          backdropDismiss: false
+        });
+        await popoverSubscribe.present();
+        popoverSubscribe.onDidDismiss().then(async (res: any) => {
+          if (!localStorage.getItem('firstDismiss')) {
+            localStorage.setItem('firstDismiss', 'true')
+          }
+        })
+      }
+      localStorage.setItem('firstDismiss', 'true')
+    })
     // }
     // }
   }

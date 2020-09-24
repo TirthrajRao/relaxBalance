@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>74528578416-fehl5h9a390eb7rcdbrrse713klqmk52.apps.googleusercontent.com</string>
+	<string>619043721773-f9gh0a1im8sh816n60ibag8kvd33jrch.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.74528578416-fehl5h9a390eb7rcdbrrse713klqmk52</string>
+	<string>com.googleusercontent.apps.619043721773-f9gh0a1im8sh816n60ibag8kvd33jrch</string>
 	<key>API_KEY</key>
-	<string>AIzaSyC97xcEwFeaRayY6LShJZapMI1X5rh99ms</string>
+	<string>AIzaSyCnDAdRz86_nhWgsK871JB3QLhqdagCJqw</string>
 	<key>GCM_SENDER_ID</key>
-	<string>74528578416</string>
+	<string>619043721773</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>io.multi.psychowalkman</string>
+	<string>io.english.psychowalkman</string>
 	<key>PROJECT_ID</key>
-	<string>multi-psychowalkman</string>
+	<string>balanceapp-english</string>
 	<key>STORAGE_BUCKET</key>
-	<string>multi-psychowalkman.appspot.com</string>
+	<string>balanceapp-english.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,8 +29,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:74528578416:ios:6c4927c42e27780dc58db5</string>
+	<string>1:619043721773:ios:f8d2d6f55c9dce27751ea4</string>
 	<key>DATABASE_URL</key>
-	<string>https://multi-psychowalkman.firebaseio.com</string>
+	<string>https://balanceapp-english.firebaseio.com</string>
 </dict>
 </plist>

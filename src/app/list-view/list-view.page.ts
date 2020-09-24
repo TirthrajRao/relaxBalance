@@ -38,6 +38,7 @@ export class ListViewPage implements OnInit {
   ionViewWillEnter() {
     this.onBoard = localStorage.getItem('onBoard');
     this.language = localStorage.getItem('language');
+    console.log("langage is equal to ======>", this.language);
     if (!localStorage.getItem('language')) {
       // this.selectLanguage();
     }

@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "74528578416",
-    "firebase_url": "https://multi-psychowalkman.firebaseio.com",
-    "project_id": "multi-psychowalkman",
-    "storage_bucket": "multi-psychowalkman.appspot.com"
+    "project_number": "25466963014",
+    "firebase_url": "https://balanceapp-french.firebaseio.com",
+    "project_id": "balanceapp-french",
+    "storage_bucket": "balanceapp-french.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:74528578416:android:724c0345cd0c7c72c58db5",
+        "mobilesdk_app_id": "1:25466963014:android:2c08db10fde29b8ab67647",
         "android_client_info": {
-          "package_name": "io.multi.psychowalkman"
+          "package_name": "io.french.psychowalkman"
         }
       },
       "oauth_client": [
         {
-          "client_id": "74528578416-mv2mfp3hcntgh8ngtmnte36n7msf6sgk.apps.googleusercontent.com",
+          "client_id": "25466963014-102ru6nfp9p9fmkrtcbbkr8kung6dp4s.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBNSo2_Qz0AzQwHZYNz8NWpEGDDTOc857I"
+          "current_key": "AIzaSyDhh9sLLJtLOWzfVTue8e-5bMWj1J7TVSs"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "74528578416-mv2mfp3hcntgh8ngtmnte36n7msf6sgk.apps.googleusercontent.com",
+              "client_id": "25466963014-102ru6nfp9p9fmkrtcbbkr8kung6dp4s.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

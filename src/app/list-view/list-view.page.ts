@@ -47,10 +47,10 @@ export class ListViewPage implements OnInit {
   ngOnInit() {
     this.getFcmToken();
     if (localStorage.getItem('language')) {
-      this.checkForEndPeriodTrial();
       this.setTrialStartDate();
-      this.userTrialInfoFirstTime();
       this.checkForRating();
+      this.checkForEndPeriodTrial();
+      this.userTrialInfoFirstTime();
     }
   }
 
@@ -178,7 +178,7 @@ export class ListViewPage implements OnInit {
     let start = moment(localStorage.getItem('trialStart'));
     let end = moment();
     let noOfDaysTrial = end.diff(start, 'days');
-    console.log(noOfDaysTrial)
+    console.log(start, end, noOfDaysTrial)
     let isPurchased = localStorage.getItem('purchased');
     let text;
     if (noOfDaysTrial > 14) {

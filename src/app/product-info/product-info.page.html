@@ -46,7 +46,7 @@
             <p>Duration: {{'subscriptionType.duration1' | translate}}</p>
             <p>Price: {{'subscriptionType.price1' | translate}}</p>
             <p>{{'subscriptionType.description1' | translate}}</p>
-            <p><ion-button (click)='buyProduct("io.english.psychowalkman.monthly")'>Buy Product</ion-button></p>
+            <p><ion-button (click)='buyProduct("io.french.psychowalkman.monthly")'>Buy Product</ion-button></p>
             
         </div>
     </ion-card>
@@ -56,7 +56,7 @@
             <p>Duration: {{'subscriptionType.duration2' | translate}}</p>
             <p>Price: {{'subscriptionType.price2' | translate}}</p>
             <p>{{'subscriptionType.description2' | translate}}</p>
-            <p><ion-button (click)='buyProduct("io.english.psychowalkman.yearly")'>Buy Product</ion-button></p>
+            <p><ion-button (click)='buyProduct("io.french.psychowalkman.yearly")'>Buy Product</ion-button></p>
         </div>
     </ion-card>
     <!-- <ion-card class="productCard">
@@ -88,14 +88,14 @@
 
   
   <ion-button expand="full" color="secondary" (click)="restore()">
-    <ion-icon slot="start" name="refresh"></ion-icon>Restore
+    <ion-icon slot="start" name="refresh"></ion-icon>{{'subscriptionType.restore' | translate}}
   </ion-button>
 
   <ion-button expand="full" color="secondary" (click)="openPolicy()">
-    <ion-icon slot="start" name="information-circle-outline"></ion-icon>Privacy Policy
+    <ion-icon slot="start" name="information-circle-outline"></ion-icon>{{'subscriptionType.privacy' | translate}}
   </ion-button>
 
   <ion-button expand="full" color="secondary" routerLink="/terms-of-use">
-    <ion-icon slot="start" name="information-circle-outline"></ion-icon>Terms of Use
+    <ion-icon slot="start" name="information-circle-outline"></ion-icon>{{'subscriptionType.terms' | translate}}
   </ion-button>
 </ion-content>

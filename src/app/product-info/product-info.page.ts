@@ -6,8 +6,8 @@ import { InAppPurchase } from '@ionic-native/in-app-purchase/ngx';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 import * as _ from 'lodash'
 
-const MONTHLYLVL_KEY = 'io.english.psychowalkman.monthly';
-const YEARLY_KEY = 'io.english.psychowalkman.yearly';
+const MONTHLYLVL_KEY = 'io.french.psychowalkman.monthly';
+const YEARLY_KEY = 'io.french.psychowalkman.yearly';
 const MONTHLYBENIFIT_KEY = 'mindmachinebalance';
 
 @Component({

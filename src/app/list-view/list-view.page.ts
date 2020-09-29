@@ -47,8 +47,8 @@ export class ListViewPage implements OnInit {
     this.getFcmToken();
     if (localStorage.getItem('language')) {
       this.checkForEndPeriodTrial();
-      // this.setTrialStartDate();
-      // this.userTrialInfoFirstTime();
+      this.setTrialStartDate();
+      this.userTrialInfoFirstTime();
       this.checkForRating();
     }
   }
@@ -89,6 +89,13 @@ export class ListViewPage implements OnInit {
           label: 'Chinese',
           value: 'chi',
           checked: this.language == 'chi'
+        },
+        {
+          name: 'radio1',
+          type: 'radio',
+          label: 'Japnees',
+          value: 'jpn',
+          checked: this.language == 'jpn'
         },
         {
           name: 'radio2',
@@ -135,7 +142,7 @@ export class ListViewPage implements OnInit {
     this.onBoard = 'true';
     this.checkForEndPeriodTrial();
     this.setTrialStartDate();
-    // this.userTrialInfoFirstTime();
+    this.userTrialInfoFirstTime();
     this.checkForRating();
   }
 
@@ -180,7 +187,7 @@ export class ListViewPage implements OnInit {
     console.log(noOfDaysTrial)
     let isPurchased = localStorage.getItem('purchased');
     let text;
-    // if (noOfDaysTrial > 14) {
+    if (noOfDaysTrial > 14) {
     // if (!localStorage.getItem('purchased')) {
       const popoverTrialEnd = await this.popoverController.create({
         componentProps: {
@@ -215,7 +222,7 @@ export class ListViewPage implements OnInit {
         localStorage.setItem('firstDismiss', 'true')
       })
     // }
-    // }
+    }
   }
 
   async userTrialInfoFirstTime() {

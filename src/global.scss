@@ -31,3 +31,25 @@
 .my-custom-class .popover-content {
     width: 80%;
 }
+
+@font-face {
+    font-family: 'walkway_boldregular';
+    src: url('assets/fonts/walkway_bold.eot');
+    src: url('assets/fonts/walkway_bold.eot?#iefix') format('embedded-opentype'),
+         url('assets/fonts/walkway_bold.woff2') format('woff2'),
+         url('assets/fonts/walkway_bold.woff') format('woff'),
+         url('assets/fonts/walkway_bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'walkway_semiboldregular';
+    src: url('assets/fonts/walkway_semibold.eot');
+    src: url('assets/fonts/walkway_semibold.eot?#iefix') format('embedded-opentype'),
+         url('assets/fonts/walkway_semibold.woff2') format('woff2'),
+         url('assets/fonts/walkway_semibold.woff') format('woff'),
+         url('assets/fonts/walkway_semibold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

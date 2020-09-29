@@ -1,4 +1,8 @@
-.headerTool {
-    --background: #0aa90a;
-    color: #fff;
+ion-header {
+    .headerTool {
+        --background: #0aa90a;
+        color: #fff;
+        font-family: 'walkway_boldregular';
+        font-weight: 600
+    }
 }
